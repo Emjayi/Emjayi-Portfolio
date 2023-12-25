@@ -7,13 +7,13 @@ import { Analytics } from "./components/analytics";
 export const metadata: Metadata = {
   title: {
     default: "Emjayi",
-    template: "You will remember!",
+    template: "Keep it simple.",
   },
-  description: "Founder of codesense.ir",
+  description: "Keep it simple.",
   openGraph: {
     title: "Emjayi",
     description:
-      "Founder of codesense.ir",
+      "Keep it simple.",
     url: "https://emjayi.ir",
     siteName: "emjayi.ir",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Emjayi",
     card: "summary_large_image",
   },
   icons: {
