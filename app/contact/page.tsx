@@ -25,7 +25,7 @@ const socials = [
 	},
 	{
 		icon: <Linkedin size={20} />,
-		href: "https://www.linkedin.com/in/emjayi-sepahi-25114161/",
+		href: "https://www.linkedin.com/in/emjayi/",
 		label: "LinkedIn",
 		handle: "Emjayi",
 	},
