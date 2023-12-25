@@ -36,7 +36,7 @@ export default function Example() {
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300 dark:via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-4 mx-auto mt-32 sm:mt-0 sm:grid-cols-4 lg:gap-16">
+				<div className="grid w-full grid-cols-1 gap-4 mx-auto mt-32 mb-12 sm:mb-0 sm:mt-0 sm:grid-cols-4 lg:gap-16">
 					{socials.map((s) => (
 						<Card>
 							<Link
@@ -48,7 +48,7 @@ export default function Example() {
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
 									aria-hidden="true"
 								/> */}
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-100 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
+								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:border-zinc-100 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
 									{s.icon}
 								</span>{" "}
 								<div className="z-10 flex flex-col items-center">
