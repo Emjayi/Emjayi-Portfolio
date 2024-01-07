@@ -1,8 +1,14 @@
 import "../global.css";
+import React, { useState, useEffect } from 'react';
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import { motion, AnimatePresence } from "framer-motion";
+import { Key } from "lucide-react";
+import { useRouter } from "next/router";
+import { Component } from "react";
+import AnimatedCursor from "react-animated-cursor"
 
 export const metadata: Metadata = {
   title: {
@@ -61,14 +67,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <Analytics />
       </head>
       <body
-        className={`bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        className={` bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={30}
+          innerScale={1}
+          outerScale={1.4}
+          outerAlpha={0}
+          outerStyle={{
+            border: '2px solid #555'
+          }
+          }
+          innerStyle={{
+            backgroundColor: 'var(--cursor-inner)'
+          }}
+          showSystemCursor={true}
+        />
         {children}
       </body>
     </html>

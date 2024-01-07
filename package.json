@@ -9,6 +9,8 @@
     "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@coreui/react": "^4.11.1",
     "@next/font": "^13.5.4",
     "@next/mdx": "^13.5.4",
     "@upstash/redis": "^1.23.3",
@@ -19,6 +21,7 @@
     "next": "^13.5.4",
     "next-contentlayer": "^0.3.4",
     "react": "^18.2.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^1.1.0",
     "rehype-autolink-headings": "^7.0.0",
