@@ -21,13 +21,13 @@ export default function Home() {
         <nav className="my-16 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
             {navigation.map((item) => (
-              <Link
+              <li><Link
                 key={item.href}
                 href={item.href}
                 className="text-sm duration-500 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
               >
                 {item.name}
-              </Link>
+              </Link></li>
             ))}
           </ul>
         </nav>
