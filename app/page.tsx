@@ -24,7 +24,7 @@ export default function Home() {
               <li><Link
                 key={item.href}
                 href={item.href}
-                className="text-sm duration-500 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+                className="text-sm duration-500 hover:font-semibold text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
               >
                 {item.name}
               </Link></li>
