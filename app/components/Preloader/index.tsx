@@ -7,11 +7,11 @@ import { opacity, slideUp } from "./anim";
 const words = [
     "I am",
     "a",
-    "Javascript",
+    "JavaScript",
     "React",
     "Next js",
-    "WEB",
-    "Designer",
+    "Node",
+    "TypeScript",
     "Developer",
 ];
 
