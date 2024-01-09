@@ -16,6 +16,7 @@
     "@upstash/redis": "^1.23.3",
     "contentlayer": "^0.3.4",
     "framer-motion": "^10.16.4",
+    "gsap": "^3.12.4",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.284.0",
     "markdown-wasm": "^1.2.0",

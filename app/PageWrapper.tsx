@@ -1,18 +1,16 @@
-"use client"
-import { AnimatePresence, motion } from 'framer-motion'
-import React from 'react'
-
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
 function PageWrapper({
-    children,
+	children,
 }: {
-    children: React.ReactNode;
-},) {
-    return (
-        <>
-
-            {children}
-            {/* <AnimatePresence>
+	children: React.ReactNode;
+}) {
+	return (
+		<>
+			{children}
+			{/* <AnimatePresence>
                 {isVisible && (
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -23,9 +21,9 @@ function PageWrapper({
                     </motion.div>
                 )}
                 {/* </motion.div> */}
-            {/* </AnimatePresence> */} */
-        </>
-    )
+			{/* </AnimatePresence> */} */
+		</>
+	);
 }
 
-export default PageWrapper
+export default PageWrapper;
