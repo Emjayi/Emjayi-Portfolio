@@ -38,7 +38,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/_app.tsx"
+    "app/_app.tsx",
+    "app/common/Magnetic/index.jsx"
   ],
   "exclude": [
     "node_modules"

@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const index = ({ children }: {
-    children: React.ReactNode
+    children: any
 }) => {
-    const magnetic = useRef(null);
+    const magnetic = useRef(null) as unknown as any
 
     useEffect(() => {
         const xTo = gsap.quickTo(magnetic.current, "x", {
@@ -16,7 +16,7 @@ const index = ({ children }: {
             ease: "elastic.out(1, 0.3)",
         });
 
-        magnetic.current.addEventListener("mousemove", (e) => {
+        magnetic.current.addEventListener("mousemove", (e: { clientX: any; clientY: any; }) => {
             const { clientX, clientY } = e;
             const { height, width, left, top } =
                 magnetic.current.getBoundingClientRect();
@@ -25,7 +25,7 @@ const index = ({ children }: {
             xTo(x * 0.35);
             yTo(y * 0.35);
         });
-        magnetic.current.addEventListener("mouseleave", (e) => {
+        magnetic.current.addEventListener("mouseleave", () => {
             xTo(0);
             yTo(0);
         });

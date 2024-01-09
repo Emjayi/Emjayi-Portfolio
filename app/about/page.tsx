@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Navigation } from "../components/nav";
 import PageWrapper from "../PageWrapper";
 import Image from "next/image";
-import { color } from "framer-motion";
 
 const technologies = [
 	{
