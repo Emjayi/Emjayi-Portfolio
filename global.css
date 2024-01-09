@@ -61,11 +61,13 @@
 
 
   :root{
-    --cursor-inner: #333
+    --cursor-inner: #333;
+    --intro-bg: rgb(35,35,36);
+    --intro-text: rgb(213,213,213);
   }
   @media (prefers-color-scheme: dark) {
     :root{
-      --cursor-inner: #fff
+      --cursor-inner: #fff;
     }
   }
 
