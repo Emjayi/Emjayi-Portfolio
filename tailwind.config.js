@@ -7,7 +7,7 @@ module.exports = {
 		"./mdx-components.tsx",
 		"content/**/*.mdx",
 	],
-
+	darkMode: ["class"],
 	theme: {
 		extend: {
 			typography: {
