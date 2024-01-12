@@ -33,7 +33,7 @@ const socials = [
 
 export default function Example() {
 	return (
-		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300 dark:via-zinc-900 to-zinc-900/0">
+		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto animate-fade-in-1">
 				<div className="grid w-full grid-cols-1 gap-4 mx-auto mt-32 mb-12 sm:mb-0 sm:mt-0 sm:grid-cols-4 lg:gap-16">

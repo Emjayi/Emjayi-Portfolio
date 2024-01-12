@@ -39,7 +39,7 @@ const technologies = [
 
 const About = () => {
 	return (
-		<div className=" min-h-screen flex flex-col justify-center items-center from-zinc-900/0 bg-gradient-to-br via-zinc-300 dark:via-zinc-900 to-zinc-900/00">
+		<div className=" min-h-screen flex flex-col justify-center items-center from-zinc-900/0 bg-gradient-to-br via-zinc-300/50 dark:via-zinc-900 to-zinc-900/00">
 			<Navigation />
 			<img
 				width={200}
@@ -62,7 +62,7 @@ const About = () => {
 				Currently, I am immersed in the dynamic realm of cutting-edge web
 				development technologies, actively engaging in numerous hands-on
 				projects to continually enhance my skills.{" "}
-				<span className=" text-purple-400 font-semibold">based in Iran.</span>
+				<span className=" linear-wipe-about font-semibold">based in Iran.</span>
 			</p>
 			<div className="flex gap-4 py-5 px-5">
 				{technologies.map((t) => (
