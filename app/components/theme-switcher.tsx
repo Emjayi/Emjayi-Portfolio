@@ -20,14 +20,12 @@ export const ThemeSwitcher = () => {
 
 
     return (
-        <Magnetic>
-            <button
-                className={`w-fit text-zinc-700 dark:text-zinc-400 absolute right-5 top-2 p-2 rounded-md hover:scale-110 active:scale-100 duration-200 animate-fade-in`}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-                {theme === "light" ? "Dark" : "Light"}
-            </button>
-        </Magnetic>
-
+        <button
+            className={`w-fit absolute right-5 top-2 rounded-md animate-fade-in text-md duration-500 p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300`}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+            <h1 className="hidden dark:block"><span className="text-zinc-500">Mode: </span>Light</h1>
+            <h1 className=" dark:hidden"><span className="text-zinc-500">Mode: </span>Dark</h1>
+        </button>
     );
 };

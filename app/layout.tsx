@@ -1,23 +1,19 @@
 import "../global.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-import { motion, AnimatePresence } from "framer-motion";
-import { Key } from "lucide-react";
-import { useRouter } from "next/router";
-import { Component } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 export const metadata: Metadata = {
 	title: {
-		default: "Emjayi",
+		default: "Emjay",
 		template: "Keep it simple.",
 	},
 	description: "Keep it simple.",
 	openGraph: {
-		title: "Emjayi",
+		title: "Emjay",
 		description: "Keep it simple.",
 		url: "https://emjayi.ir",
 		siteName: "emjayi.ir",
@@ -43,7 +39,7 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Emjayi",
+		title: "Emjay",
 		card: "summary_large_image",
 	},
 	icons: {
@@ -60,13 +56,19 @@ const calSans = LocalFont({
 	variable: "--font-calsans",
 });
 
+const telSans = LocalFont({
+	src: "../public/fonts/telemarinesbold1.ttf",
+	variable: "--font-telsans",
+});
+
+
 export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${[inter.variable, calSans.variable].join(" ")} `} >
+		<html lang="en" className={`${[inter.variable, calSans.variable, telSans.variable].join(" ")} `} >
 			<head>
 				<Analytics />
 			</head>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import LocalFont from "next/font/local";
 import Particles from "./components/particles";
 import { AnimatePresence, motion } from "framer-motion";
 import Preloader from "./components/Preloader";
@@ -8,6 +9,8 @@ import Magnetic from "./common/Magnetic";
 import { ThemeSwitcher } from "./components/theme-switcher";
 import { ThemeProvider } from "./theme-provider";
 import ParticlesLight from "./components/particles-light";
+import { Inter } from "next/font/google";
+
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -15,7 +18,11 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
+
 export default function Home() {
+
+
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -46,7 +53,7 @@ export default function Home() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="text-sm duration-500 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+                      className="text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
                     >
                       {item.name}
                     </Link>
@@ -64,8 +71,8 @@ export default function Home() {
             className="absolute inset-0 -z-10 animate-fade-in"
             quantity={100}
           />
-          <h1 className="z-10 text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-            Emjayi
+          <h1 className='z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text'>
+            eMJAY
           </h1>
 
           <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />

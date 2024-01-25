@@ -35,6 +35,11 @@ const technologies = [
 		icon: "/icons/tailwind-light.png",
 		iconDark: "/icons/tailwind.png",
 	},
+	{
+		name: "Figma",
+		icon: "/icons/figma.png",
+		iconDark: "/icons/figma.png",
+	},
 ];
 
 const About = () => {
@@ -57,7 +62,7 @@ const About = () => {
 			</h1>
 			<p className="text-sm md:text-lg text-zinc-800 dark:text-zinc-300 animate-fade-in-2 md:w-[800px] text-center justify-self-start px-5">
 				{" "}
-				I love coffee and computers. My journey started with WordPress web
+				I love design and computers. My journey started with WordPress web
 				design, followed by acquiring proficiency in CSS and JavaScript.
 				Currently, I am immersed in the dynamic realm of cutting-edge web
 				development technologies, actively engaging in numerous hands-on
@@ -68,7 +73,7 @@ const About = () => {
 				{technologies.map((t) => (
 					<span className="relative z-10 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 text-sm duration-1000">
 						<Image
-							className="dark:hidden animate-fade-in-2"
+							className="dark:hidden animate-fade-in-2 object-fit"
 							src={t.icon}
 							width={200}
 							height={200}
