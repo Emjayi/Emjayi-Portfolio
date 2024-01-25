@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import LocalFont from "next/font/local";
 import Particles from "./components/particles";
 import { AnimatePresence, motion } from "framer-motion";
 import Preloader from "./components/Preloader";
@@ -9,7 +8,6 @@ import Magnetic from "./common/Magnetic";
 import { ThemeSwitcher } from "./components/theme-switcher";
 import { ThemeProvider } from "./theme-provider";
 import ParticlesLight from "./components/particles-light";
-import { Inter } from "next/font/google";
 
 
 const navigation = [

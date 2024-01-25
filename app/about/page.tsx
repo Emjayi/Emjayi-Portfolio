@@ -57,7 +57,7 @@ const About = () => {
 			/>
 			<h1 className=" text-xl text-zinc-800 dark:text-zinc-300 animate-fade-in-1 md:text-3xl py-5 px-5 text-center font-semibold">
 				a{" "}
-				<span className="linear-wipe-about font-bold">FullStack Developer</span>{" "}
+				<span className="linear-wipe-about font-bold">Frontend Developer</span>{" "}
 				from the future
 			</h1>
 			<p className="text-sm md:text-lg text-zinc-800 dark:text-zinc-300 animate-fade-in-2 md:w-[800px] text-center justify-self-start px-5">
