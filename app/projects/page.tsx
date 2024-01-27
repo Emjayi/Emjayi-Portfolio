@@ -37,7 +37,7 @@ export default function Projects() {
     <main className="flex flex-col items-center bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0" >
       <Navigation />
 
-      <div className=" w-[1200px] flex flex-col px-24 py-16 my-24">
+      <div className=" w-[1200px] flex flex-col px-24 py-16 my-24 animate-fade-in-1">
         {
           projects.map((project, index: any) => {
             return <Project href={`/projects/${project.link}`} index={index} title={project.title} setModal={setModal} key={index} />

@@ -12,7 +12,7 @@ const page = () => {
     return (
         <><header
             ref={ref}
-            className="relative isolate overflow-hidden bg-gradient-to-tl from-black via-zinc-900 to-black"
+            className="animate-fade-in-1 relative isolate overflow-hidden bg-gradient-to-tl from-black via-zinc-900 to-zinc-900"
         >
             <div
                 className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${isIntersecting
@@ -21,28 +21,28 @@ const page = () => {
             >
                 <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
                     <div className="flex justify-between gap-8">
-                        <Link target="_blank" href="https://twitter.com/emjayi">
+                        <a target="_blank" href="https://twitter.com/emjayi_">
                             <Twitter
                                 className={`w-6 h-6 duration-200 hover:font-medium ${isIntersecting
                                     ? " text-zinc-400 hover:text-zinc-100"
                                     : "text-zinc-600 hover:text-zinc-900"} `} />
-                        </Link>
-                        <Link target="_blank" href="https://github.com/emjayi">
+                        </a>
+                        <a target="_blank" href="https://github.com/emjayi">
                             <Github
                                 className={`w-6 h-6 duration-200 hover:font-medium ${isIntersecting
                                     ? " text-zinc-400 hover:text-zinc-100"
                                     : "text-zinc-600 hover:text-zinc-900"} `} />
-                        </Link>
+                        </a>
                     </div>
 
-                    <Link
+                    <a
                         href="/projects"
                         className={`duration-200 hover:font-medium ${isIntersecting
                             ? " text-zinc-400 hover:text-zinc-100"
                             : "text-zinc-600 hover:text-zinc-900"} `}
                     >
                         <ArrowLeft className="w-6 h-6 " />
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className="container mx-auto relative isolate overflow-hidden  py-24 sm:py-32">
@@ -52,7 +52,7 @@ const page = () => {
                             Refaee Photography
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-zinc-300">
-                            Details will be written here...
+                            This is where it all began...
                         </p>
                     </div>
 
