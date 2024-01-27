@@ -4,7 +4,9 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import Project from "../components/project";
+import Projects from "../components/projects";
+import { useLiveReload } from "next-contentlayer/hooks";
+import index from "../common/Magnetic";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
@@ -101,7 +103,7 @@ export default async function ProjectsPage() {
 							.filter((_, i) => i % 3 === 2)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Project href={`/projects/${project}`} index={index} title={project.title} setModal={setModal} key={index} />
+
 								</Card>
 							))}
 					</div>
