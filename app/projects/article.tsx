@@ -6,16 +6,15 @@ import Projects from "../components/projects";
 
 type Props = {
 	project: Project;
-	index: string
 };
 
-export const Article: React.FC<Props> = ({ project, index }) => {
+export const Article: React.FC<Props> = ({ project }) => {
 
 	const [modal, setModal] = useState({ active: false, index: 0 })
 
 	return (
 		<Link href={`/projects/${project.slug}`}>
-			<Projects href={`/projects/${project.slug}`} index={index} title={project.title} setModal={setModal} key={index} />
+			<Projects href={`/projects/${project.slug}`} title={project.title} setModal={setModal} />
 			<article className="p-4 md:p-8">
 				<div className="flex justify-between gap-2 items-center">
 
