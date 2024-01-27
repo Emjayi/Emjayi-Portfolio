@@ -4,9 +4,13 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
+import Project from "../components/projects";
+import { useLiveReload } from "next-contentlayer/hooks";
+import index from "../common/Magnetic";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
+	useLiveReload()
 
 	const featured = allProjects.find((project) => project.slug === "unkey")!;
 	const top2 = allProjects.find((project) => project.slug === "planetfall")!;
@@ -26,23 +30,13 @@ export default async function ProjectsPage() {
 		);
 
 	return (
-		<div className="relative pb-16">
+		<div className="flex flex-col items-center bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-				<div className="max-w-2xl mx-auto lg:mx-0">
-					<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-						Projects
-					</h2>
-					<p className="mt-4 text-zinc-400">
-						Some of the projects are from work and some are on my own time.
-					</p>
-				</div>
-				<div className="w-full h-px bg-zinc-800" />
-
 				<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
 					<Card>
 						<Link href={`/projects/${featured.slug}`}>
-							<article className="relative w-full h-full p-4 md:p-8">
+							<article>
 								<div className="flex items-center justify-between gap-2">
 									<div className="text-xs text-zinc-100">
 										{featured.date ? (
@@ -109,7 +103,7 @@ export default async function ProjectsPage() {
 							.filter((_, i) => i % 3 === 2)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Article project={project} />
+									<Project href={`/projects/${project}`} index={index} title={project.title} setModal={setModal} key={index} />
 								</Card>
 							))}
 					</div>
