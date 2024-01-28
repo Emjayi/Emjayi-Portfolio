@@ -13,7 +13,8 @@
     "@coreui/react": "^4.11.1",
     "@next/font": "^13.5.4",
     "@next/mdx": "^13.5.4",
-    "framer-motion": "^10.16.4",
+    "clsx": "^2.1.0",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.284.0",
@@ -29,6 +30,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "3.0.1",
     "sass": "^1.69.7",
+    "tailwind-merge": "^2.2.1",
     "typescript": "^5.2.2"
   },
   "devDependencies": {

@@ -41,6 +41,7 @@ module.exports = {
 				"fade-in": "fade-in 5.5s ease-in-out forwards",
 				"fade-in-1": "fade-in 1s ease-in-out forwards",
 				"fade-in-2": "fade-in 2s ease-in-out forwards",
+				"fade-in-6": "fade-in 10s ease-in-out forwards",
 				title: "title 5s ease-out forwards",
 				"fade-left": "fade-left 5s ease-in-out forwards",
 				"fade-right": "fade-right 5s ease-in-out forwards",

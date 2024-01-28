@@ -14,18 +14,18 @@ const projects = [
   },
   {
     title: "DigiFabric",
-    src: "officestudio.png",
-    color: "#8C8C8C"
+    src: "refaee.gif",
+    color: "#000000"
   },
   {
     title: "Khersebozorg",
-    src: "locomotive.png",
-    color: "#EFE8D3"
+    src: "refaee.gif",
+    color: "#000000"
   },
   {
     title: "Takfazkala",
-    src: "silencio.png",
-    color: "#706D63"
+    src: "refaee.gif",
+    color: "#000000"
   }
 ]
 
@@ -37,7 +37,7 @@ export default function Projects() {
     <main className="flex flex-col items-center bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0" >
       <Navigation />
 
-      <div className=" w-[1200px] flex flex-col px-24 py-16 my-24 animate-fade-in-1">
+      <div className=" md:w-[1200px] flex flex-col md:px-24 md:py-16 my-24 animate-fade-in-1">
         {
           projects.map((project, index: any) => {
             return <Project href={`/projects/${project.link}`} index={index} title={project.title} setModal={setModal} key={index} />

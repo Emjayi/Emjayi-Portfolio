@@ -43,8 +43,8 @@ export default function Home() {
           </AnimatePresence>
         </div>
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-white via-zinc-300/50 to-white dark:from-black dark:via-zinc-600/20 dark:to-black">
-          <nav className="my-16 animate-fade-in">
-            <ul className="flex items-center justify-center gap-4">
+          <nav className="my-4 md:my-16 animate-fade-in">
+            <ul className="flex items-center justify-center md:gap-4">
               {navigation.map((item) => (
                 <Magnetic>
                   <li key={item.name}>
@@ -69,17 +69,17 @@ export default function Home() {
             className="absolute inset-0 -z-10 animate-fade-in"
             quantity={100}
           />
-          <h1 className='z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text'>
+          <h1 className='z-10 font-tel text-7xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display md:text-9xl whitespace-nowrap bg-clip-text'>
             eMJAY
           </h1>
 
           <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-          <div className="flex gap-3 mt-12 mb-0 text-center duration-700 animate-fade-in invisible md:visible">
-            <h1 className="linear-wipe-fir text-xl font-bold">Design.</h1>
-            <h1 className="linear-wipe-sec text-xl font-bold">Develop.</h1>
-            <h1 className="linear-wipe-thr text-xl font-bold">Create.</h1>
+          <div className="flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
+            <h1 className="linear-wipe-fir text-sm md:text-xl font-bold">Design.</h1>
+            <h1 className="linear-wipe-sec text-sm md:text-xl font-bold">Develop.</h1>
+            <h1 className="linear-wipe-thr text-sm md:text-xl font-bold">Create.</h1>
           </div>
-          <div className="mb-8 mt-4 text-center animate-fade-in invisible md:visible">
+          <div className="mb-8 mt-4 text-center animate-fade-in">
             <h2 className="text-sm text-zinc-500 ">Keep it simple.</h2>
           </div>
         </div>

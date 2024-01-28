@@ -8,7 +8,7 @@ export default function index({ href, index, title, setModal }: { href: string, 
     return (
         <Link href={href}>
             <div onMouseEnter={() => { setModal({ active: true, index }) }} onMouseLeave={() => { setModal({ active: false, index }) }} className={`${styles.project} `}>
-                <h2>{title}</h2>
+                <h2 className=' text-xl md:text-4xl'>{title}</h2>
             </div>
         </Link>
 
