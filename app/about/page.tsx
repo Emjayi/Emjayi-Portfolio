@@ -79,11 +79,11 @@ const About = () => {
 					"https://media.licdn.com/dms/image/D4E03AQEz-pFkkK5w2g/profile-displayphoto-shrink_800_800/0/1689298538669?e=1710374400&v=beta&t=2bnNvKGH5paFe7VREIFEdHZ6SvbSrTk2ANv4BOatkxQ"
 				}
 			/>
-			<h1 className=" text-xl text-zinc-800 dark:text-zinc-300 animate-fade-in md:text-3xl py-5 px-5 text-center font-semibold">
+			{/* <h1 className=" text-xl text-zinc-800 dark:text-zinc-300 animate-fade-in md:text-3xl py-5 px-5 text-center font-semibold">
 				a{" "}
 				<span className="linear-wipe-about font-bold">Frontend Developer</span>{" "}
 				from the future
-			</h1>
+			</h1> */}
 			<TextGenerateEffect words={description} className="md:w-[800px] text-center justify-self-start px-5 mb-4" />
 			<div className="animate-fade-in-2 flex gap-4 py-5 px-5 max-w-80 md:max-w-none flex-wrap">
 				<AnimatedTooltip items={tech} />

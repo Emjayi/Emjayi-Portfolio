@@ -43,8 +43,8 @@ export default function Home() {
           </AnimatePresence>
         </div>
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-white via-zinc-300/50 to-white dark:from-black dark:via-zinc-600/20 dark:to-black">
-          <nav className="my-4 md:my-16 animate-fade-in">
-            <ul className="flex items-center justify-center md:gap-4">
+          <nav className=" pb-6 md:my-16 animate-fade-in">
+            <ul className="flex items-center justify-center gap-2 md:gap-6">
               {navigation.map((item) => (
                 <Magnetic>
                   <li key={item.name}>
@@ -69,7 +69,7 @@ export default function Home() {
             className="absolute inset-0 -z-10 animate-fade-in"
             quantity={100}
           />
-          <h1 className='z-10 font-tel text-7xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display md:text-9xl whitespace-nowrap bg-clip-text'>
+          <h1 className='z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text'>
             eMJAY
           </h1>
 
