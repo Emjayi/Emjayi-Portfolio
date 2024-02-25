@@ -28,14 +28,14 @@ export const Navigation: React.FC = () => {
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-2 md:gap-8">
-						<Magnetic>
+						{/* <Magnetic>
 							<Link
 								href="/projects"
 								className="duration-200 text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-100"
 							>
 								Projects
 							</Link>
-						</Magnetic>
+						</Magnetic> */}
 						<Magnetic>
 							<Link
 								href="/about"

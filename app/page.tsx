@@ -11,7 +11,7 @@ import ParticlesLight from "./components/particles-light";
 
 
 const navigation = [
-  { name: "Projects", href: "/projects" },
+  // { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system">
       <ThemeSwitcher />
       <div>
         <div className="">
@@ -74,7 +74,7 @@ export default function Home() {
           </h1>
 
           <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-          <div className="flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
+          <div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
             <h1 className="linear-wipe-fir text-sm md:text-xl font-bold">Design.</h1>
             <h1 className="linear-wipe-sec text-sm md:text-xl font-bold">Develop.</h1>
             <h1 className="linear-wipe-thr text-sm md:text-xl font-bold">Create.</h1>

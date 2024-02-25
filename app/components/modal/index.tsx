@@ -41,7 +41,7 @@ export default function index({ modal, projects }: { modal: any, projects: any }
 
   return (
     <>
-      <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
+      <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={`invisible md:visible${styles.modalContainer}`}>
         <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
           {
             projects.map((project: { src: any; color: any; }, index: any) => {
