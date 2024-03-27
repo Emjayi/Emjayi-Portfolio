@@ -7,6 +7,7 @@ import { AnimatedTooltip } from "../ui/tooltip";
 import { ThemeProvider } from "next-themes";
 import { ThemeSwitcher } from "../components/theme-switcher";
 
+
 const tech = [
 	{
 		id: 0,
@@ -74,12 +75,10 @@ const About = () => {
 				<Navigation />
 				<img
 					width={200}
-					className=" animate-fade-in rounded-full md:mt-0 mt-24  shadow-lg shadow-purple-300 dark:shadow-purple-700 dark:shadow-sm"
+					className=" animate-fade-in rounded-full md:mt-0 mt-24  shadow-lg shadow-white dark:shadow-black dark:shadow-sm"
 					height={200}
 					alt="Profile"
-					src={
-						"https://media.licdn.com/dms/image/D4E03AQEz-pFkkK5w2g/profile-displayphoto-shrink_800_800/0/1689298538669?e=1710374400&v=beta&t=2bnNvKGH5paFe7VREIFEdHZ6SvbSrTk2ANv4BOatkxQ"
-					}
+					src={'/profile.jpg'}
 				/>
 				{/* <h1 className=" text-xl text-zinc-800 dark:text-zinc-300 animate-fade-in md:text-3xl py-5 px-5 text-center font-semibold">
 				a{" "}
@@ -87,7 +86,7 @@ const About = () => {
 				from the future
 			</h1> */}
 				<TextGenerateEffect words={description} className="md:w-[800px] text-center justify-self-start px-5 mb-4" />
-				<div className="animate-fade-in-2 flex gap-4 py-5 px-5 max-w-80 md:max-w-none flex-wrap">
+				<div className="animate-fade-in-2 flex py-5 px-10 gap-3 flex-wrap justify-center">
 					<AnimatedTooltip items={tech} />
 				</div>
 			</div>

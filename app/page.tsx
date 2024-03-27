@@ -37,11 +37,11 @@ export default function Home() {
     <ThemeProvider attribute="class" defaultTheme="system">
       <ThemeSwitcher />
       <div>
-        <div className="">
+        <>
           <AnimatePresence mode="wait">
             {isLoading && <Preloader />}
           </AnimatePresence>
-        </div>
+        </>
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-white via-zinc-300/50 to-white dark:from-black dark:via-zinc-600/20 dark:to-black">
           <nav className="pb-6 md:pb-0 md:my-16 animate-fade-in">
             <ul className="flex items-center justify-center gap-2 md:gap-6">
