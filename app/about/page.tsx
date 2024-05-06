@@ -40,7 +40,7 @@ const tech = [
 	{
 		id: 4,
 		name: "Node js",
-		designation: "Backend",
+		designation: "Server",
 		image:
 			"/icons/nodejs.png"
 	},
@@ -75,7 +75,7 @@ const About = () => {
 				<Navigation />
 				<img
 					width={200}
-					className=" animate-fade-in rounded-full md:mt-0 mt-24  shadow-lg shadow-white dark:shadow-black dark:shadow-sm"
+					className="animate-fade-in-1 rounded-full md:mt-0 mt-24  shadow-lg shadow-white dark:shadow-black dark:shadow-sm"
 					height={200}
 					alt="Profile"
 					src={'/profile.jpg'}
@@ -85,8 +85,8 @@ const About = () => {
 				<span className="linear-wipe-about font-bold">Frontend Developer</span>{" "}
 				from the future
 			</h1> */}
-				<TextGenerateEffect words={description} className="md:w-[800px] text-center justify-self-start px-5 mb-4" />
-				<div className="animate-fade-in-2 flex py-5 px-10 gap-3 flex-wrap justify-center">
+				<TextGenerateEffect words={description} className="animate-fade-in-1 md:w-[800px] text-center justify-self-start px-5 mb-4" />
+				<div className="animate-fade-in-1 flex py-5 px-10 gap-3 flex-wrap justify-center">
 					<AnimatedTooltip items={tech} />
 				</div>
 			</div>

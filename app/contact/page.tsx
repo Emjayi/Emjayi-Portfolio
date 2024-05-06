@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, PhoneCall, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -7,16 +7,16 @@ import { ThemeProvider } from "next-themes";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/emjayi_",
-		label: "Twitter",
-		handle: "@emjayi_",
+		icon: <PhoneCall size={20} />,
+		href: "tel:+989332643163",
+		label: "Call me",
+		handle: "emjay",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:emjay32841@gmail.com",
+		href: "mailto:mjs32841@gmail.com",
 		label: "Email",
-		handle: "dev@emjayi.ir",
+		handle: "mjs32841",
 	},
 	{
 		icon: <Github size={20} />,
