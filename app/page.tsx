@@ -11,7 +11,6 @@ import ParticlesLight from "./components/particles-light";
 
 
 const navigation = [
-  // { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
