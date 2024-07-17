@@ -3,6 +3,7 @@ import { projects } from '@/content/data';
 import Card from './Card';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 export default function Projects() {
     const ref = useRef(null)
@@ -15,6 +16,6 @@ export default function Projects() {
                     return <Card key={`p_${i}`} {...project} i={i} />
                 })
             }
-        </motion.div>
+        </motion.div >
     )
 }

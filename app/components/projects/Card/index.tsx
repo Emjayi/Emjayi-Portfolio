@@ -24,10 +24,10 @@ const Card = ({ title, description, src, url, color, i }: any) => {
                 className={styles.card}
                 style={{ backgroundColor: color, top: `calc(-5vh + ${i * 25}px)` }}
             >
-                <h2>{title}</h2>
+                <h2 className='font-display'>{title}</h2>
                 <div className={styles.body}>
                     <div className={styles.description}>
-                        <p>{description}</p>
+                        <p className='font-sans'>{description}</p>
                         <span>
                             <a href={url} target="_blank">See more</a>
                             <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">

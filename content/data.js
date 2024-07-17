@@ -4,23 +4,23 @@ export const projects = [
 
         title: "Baroque",
 
-        description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+        description: "The foundation of Baroque Company was laid in 1982 when Engineer Hasan Roshanayi Moghadam graduated from Ferdowsi University of Mashhad (Civil Engineering) and entered the construction field. After years of significant projects, in 2010, he established Baroque Company with reputable partners to harness modern techniques and new-generation specialists. Baroque aims to improve building standards, offer innovative residential and commercial designs, respect climate-based architecture, and promote sustainability. We focus on workforce development, global standards, and professional integrity. At Baroque, we strive to elevate building quality and transform construction culture through the latest knowledge, top-tier software and hardware, and a strong professional conscience.",
 
-        src: "refaee.gif",
+        src: "baroque.png",
 
-        link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
+        link: "/baroque",
 
-        color: "#e3390e"
+        color: "#85700080"
 
     },
 
     {
 
-        title: "Silencio",
+        title: "IML Technology",
         description: "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-        src: "silencio.png",
+        src: "iml.png",
         link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-        color: "#E0CA3C"
+        color: "#d1260099"
     },
 
     {
@@ -33,7 +33,7 @@ export const projects = [
 
         link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
 
-        color: "#136F63"
+        color: "#00a0d199"
 
     }
 ]
