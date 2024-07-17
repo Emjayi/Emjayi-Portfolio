@@ -1,6 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { cn } from "@/util/cn";
 
 export const TextGenerateEffect = ({
@@ -10,10 +10,13 @@ export const TextGenerateEffect = ({
     words: string;
     className?: string;
 }) => {
+    const ref = useRef(null)
+    const inView = useInView(ref)
     const [scope, animate] = useAnimate();
     let wordsArray = words.split(" ");
+    console.log(inView)
     useEffect(() => {
-        animate(
+        inView && animate(
             "span",
             {
                 opacity: 1,
@@ -23,21 +26,22 @@ export const TextGenerateEffect = ({
                 delay: stagger(0.2),
             }
         );
-    }, [scope.current]);
-
+    }, [scope.current, inView]);
     const renderWords = () => {
         return (
-            <motion.div ref={scope}>
-                {wordsArray.map((word, idx) => {
-                    return (
-                        <motion.span
-                            key={word + idx}
-                            className=" text-sm md:text-lg text-zinc-800 font-sans dark:text-zinc-300 opacity-25"
-                        >
-                            {word}{" "}
-                        </motion.span>
-                    );
-                })}
+            <motion.div ref={ref}>
+                <motion.div ref={scope}>
+                    {wordsArray.map((word, idx) => {
+                        return (
+                            <motion.span
+                                key={word + idx}
+                                className=" text-sm md:text-lg text-zinc-800 font-sans dark:text-zinc-300 opacity-25"
+                            >
+                                {word}{" "}
+                            </motion.span>
+                        );
+                    })}
+                </motion.div>
             </motion.div>
         );
     };

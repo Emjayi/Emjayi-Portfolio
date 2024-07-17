@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 
 export const ThemeSwitcher = () => {
@@ -20,11 +21,11 @@ export const ThemeSwitcher = () => {
 
     return (
         <button
-            className={`w-fit absolute right-5 top-2 rounded-md animate-fade-in text-md duration-500 p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300`}
+            className={`w-fit fixed right-4 bottom-4 z-50 rounded-md animate-fade-in text-md duration-500 p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300`}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-            <h1 className="hidden dark:block"><span className="text-zinc-500">Mode: </span>Light</h1>
-            <h1 className=" dark:hidden"><span className="text-zinc-500">Mode: </span>Dark</h1>
+            <div className="hidden dark:block"><Sun width={100} /></div>
+            <h1 className=" dark:hidden"><Moon width={100} /></h1>
         </button>
     );
 };

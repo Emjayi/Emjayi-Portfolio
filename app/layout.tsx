@@ -5,6 +5,7 @@ import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import AnimatedCursor from "react-animated-cursor";
+import { Header } from "./components/Header";
 
 export const metadata: Metadata = {
 	title: {
@@ -92,6 +93,7 @@ export default function RootLayout({
 						showSystemCursor={true}
 					/>
 				</div>
+				{/* <Header navItems={navItems} isVisible={true} /> */}
 				{children}
 			</body>
 		</html >
