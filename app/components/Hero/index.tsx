@@ -31,15 +31,13 @@ export default function Hero() {
             <nav className="pb-6 md:pb-0 md:my-16 animate-fade-in">
                 <ul className="flex items-center justify-center gap-2 md:gap-6">
                     {navigation.map((item, index) => (
-
-                        <Magnetic>
-                            <li key={item.name}>
+                        <Magnetic key={index}>
+                            <li>
                                 <ScrollLink to={`${item.href}`} smooth={true} duration={1200} offset={100} className=' cursor-pointer block text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
                                     {item.name}
                                 </ScrollLink>
                             </li>
                         </Magnetic>
-
                     ))}
                 </ul>
             </nav>

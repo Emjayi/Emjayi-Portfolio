@@ -51,7 +51,7 @@ export default function Home() {
         <div className="overflow-clip bg-gradient-to-tl from-white via-zinc-300/50 to-white dark:from-black dark:via-zinc-600/20 dark:to-black">
           <Hero />
           <div className="" >
-            <h2 className="w-full text-center uppercase -mb-12">Latest Projects</h2>
+            <h2 className="w-full text-md text-center uppercase -mb-12 bold">Latest Projects</h2>
             <Projects />
           </div>
         </div>

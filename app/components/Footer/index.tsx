@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from '../card'
 import Link from 'next/link'
-import { Github, Linkedin, Mail, PhoneCall } from 'lucide-react';
+import { ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from 'lucide-react';
 import { TextGenerateEffect } from '@/app/ui/text-generator';
 import { AnimatedTooltip } from '@/app/ui/tooltip';
 import { Link as ScrollLink } from 'react-scroll';
@@ -101,8 +101,11 @@ export default function Footer() {
 
                         <Section2 />
 
-                        <ScrollLink to="home" smooth={true} duration={1200} className=' cursor-pointer block text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
-                            <h2 className='absolute bottom-16 right-16 text-lg'>Back to top</h2>
+                        <ScrollLink to="home" smooth={true} duration={1200} className='absolute flex items-center gap-2 bottom-16 right-16 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
+                            <h2 className=' text-lg'>Back to top</h2><ArrowUpIcon width={25} height={25} />
+                        </ScrollLink>
+                        <ScrollLink to="projects" smooth={true} duration={1200} offset={120} className='absolute flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
+                            <h2 className=' text-lg'>Projects</h2>
                         </ScrollLink>
                     </div>
                 </div>
@@ -154,8 +157,8 @@ const Nav = () => {
         <div className='flex shrink-0 gap-20 mt-32'>
 
             <div className="flex flex-col lg:flex-row w-full items-end justify-end gap-4 mx-auto mt-32 mb-12 sm:mb-0 sm:mt-0 sm:grid-cols-4 lg:gap-16">
-                {socials.map((s) => (
-                    <Card>
+                {socials.map((s, index) => (
+                    <Card key={index}>
                         <Link
                             href={s.href}
                             target="_blank"

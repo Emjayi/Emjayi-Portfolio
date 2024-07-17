@@ -14,7 +14,6 @@ export const TextGenerateEffect = ({
     const inView = useInView(ref)
     const [scope, animate] = useAnimate();
     let wordsArray = words.split(" ");
-    console.log(inView)
     useEffect(() => {
         inView && animate(
             "span",
@@ -26,7 +25,7 @@ export const TextGenerateEffect = ({
                 delay: stagger(0.2),
             }
         );
-    }, [scope.current, inView]);
+    }, [inView]);
     const renderWords = () => {
         return (
             <motion.div ref={ref}>
