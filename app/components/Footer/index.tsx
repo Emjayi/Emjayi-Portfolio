@@ -101,10 +101,10 @@ export default function Footer() {
 
                         <Section2 />
 
-                        <ScrollLink to="home" smooth={true} duration={1200} className='absolute flex items-center gap-2 bottom-16 right-16 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
+                        <ScrollLink to="home" smooth={true} duration={1200} className='absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
                             <h2 className=' text-lg'>Back to top</h2><ArrowUpIcon width={25} height={25} />
                         </ScrollLink>
-                        <ScrollLink to="projects" smooth={true} duration={1200} offset={120} className='absolute flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
+                        <ScrollLink to="projects" smooth={true} duration={1200} offset={120} className='absolute hidden lg:flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
                             <h2 className=' text-lg'>Projects</h2>
                         </ScrollLink>
                     </div>
@@ -119,8 +119,9 @@ const Section1 = () => {
     return (
 
         <div className='flex justify-between items-center'>
-
-            <div className='h-full flex flex-col justify-end'>
+            <h1 className='absolute block sm:hidden w-[100dvw] text-center right-0 top-48'>Need a fullstack developer?</h1>
+            <p className='absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56'>Give me a call.</p>
+            <div className='h-full hidden lg:flex flex-col justify-end'>
                 <TextGenerateEffect words={description} className="animate-fade-in-1 justify-self-start px-5 mb-4" />
                 <div className="animate-fade-in-1 flex py-5 px-10 gap-3 flex-wrap justify-center">
                     <AnimatedTooltip items={tech} />
