@@ -4,7 +4,7 @@ export const projects = [
 
         title: "Baroque",
 
-        description: "The foundation of Baroque Company was laid in 1982 when Engineer Hasan Roshanayi Moghadam graduated from Ferdowsi University of Mashhad (Civil Engineering) and entered the construction field. After years of significant projects, in 2010, he established Baroque Company with reputable partners to harness modern techniques and new-generation specialists. Baroque aims to improve building standards, offer innovative residential and commercial designs, respect climate-based architecture, and promote sustainability. We focus on workforce development, global standards, and professional integrity. At Baroque, we strive to elevate building quality and transform construction culture through the latest knowledge, top-tier software and hardware, and a strong professional conscience.",
+        description: "The foundation of Baroque Company was laid in 1982 when Engineer Hasan Roshanayi Moghadam graduated from Ferdowsi University of Mashhad (Civil Engineering) and entered the construction field. After years of significant projects, in 2010, he established Baroque Company with reputable partners to harness modern techniques and new-generation specialists.",
 
         src: "baroque.png",
 

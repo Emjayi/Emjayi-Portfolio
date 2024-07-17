@@ -31,8 +31,8 @@
         gap: 50px;
   
         .description{
-          @media screen and (max-width: 768px) {display: none;}
           width: 40%;
+          @media screen and (max-width: 768px) {display: none;};
           position: relative;
           top: 10%;
           p{
@@ -55,9 +55,9 @@
         }
   
         .imageContainer{
-          @media screen and (max-width: 768px) {width: 100%;}
           position: relative;
           width: 60%;
+          @media screen and (max-width: 768px) {width: 100%;};
           height: 100%;
           border-radius: 25px;
           overflow: hidden;

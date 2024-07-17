@@ -85,28 +85,24 @@ const socials = [
 export default function Footer() {
     return (
         <div
-
             className='relative h-[800px]'
-
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-
         >
-
             <div className='relative h-[calc(100vh+800px)] -top-[100vh]'>
-
                 <div className='h-[800px] sticky top-[calc(100vh-800px)]'>
                     <div className=' bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between'>
 
                         <Section1 />
-
                         <Section2 />
 
                         <ScrollLink to="home" smooth={true} duration={1200} className='absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
                             <h2 className=' text-lg'>Back to top</h2><ArrowUpIcon width={25} height={25} />
                         </ScrollLink>
+
                         <ScrollLink to="projects" smooth={true} duration={1200} offset={120} className='absolute hidden lg:flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300'>
                             <h2 className=' text-lg'>Projects</h2>
                         </ScrollLink>
+
                     </div>
                 </div>
             </div>
