@@ -14,6 +14,6 @@ export default function Projects() {
 			{projects.map((project, i) => {
 				return <Card key={`p_${i}`} {...project} i={i} />;
 			})}
-		</motion.div>
+		</motion.div >
 	);
 }

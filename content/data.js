@@ -17,7 +17,7 @@ export const projects = [
 		description:
 			"This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
 		src: "iml.png",
-		link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+		link: "/iml",
 		color: "#d1260099",
 	},
 
@@ -29,7 +29,7 @@ export const projects = [
 
 		src: "officestudio.png",
 
-		link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+		link: "/zissou",
 
 		color: "#00a0d199",
 	},
