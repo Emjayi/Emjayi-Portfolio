@@ -62,20 +62,25 @@ const telSans = LocalFont({
 	variable: "--font-telsans",
 });
 
-
 export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${[inter.variable, calSans.variable, telSans.variable].join(" ")} `} >
+		<html
+			lang="en"
+			className={`${[inter.variable, calSans.variable, telSans.variable].join(
+				" ",
+			)} `}
+		>
 			<head>
 				<Analytics />
 			</head>
 			<body
-				className={` bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-					}`}
+				className={` bg-white dark:bg-black ${
+					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+				}`}
 			>
 				<div className="hidden md:flex">
 					<AnimatedCursor
@@ -96,6 +101,6 @@ export default function RootLayout({
 				{/* <Header navItems={navItems} isVisible={true} /> */}
 				{children}
 			</body>
-		</html >
+		</html>
 	);
 }
