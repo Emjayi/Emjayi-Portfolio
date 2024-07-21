@@ -5,7 +5,6 @@ import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import AnimatedCursor from "react-animated-cursor";
-import { Header } from "./components/Header";
 
 export const metadata: Metadata = {
 	title: {
@@ -78,9 +77,8 @@ export default function RootLayout({
 				<Analytics />
 			</head>
 			<body
-				className={` bg-white dark:bg-black ${
-					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-				}`}
+				className={` bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+					}`}
 			>
 				<div className="hidden md:flex">
 					<AnimatedCursor

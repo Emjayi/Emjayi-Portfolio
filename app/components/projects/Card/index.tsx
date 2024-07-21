@@ -47,14 +47,17 @@ const Card = ({ title, description, src, url, color, i }: any) => {
 						</div>
 
 						<div className={styles.imageContainer}>
-							<motion.div style={{ scale: imageScale }} className={styles.inner}>
+							<motion.div
+								style={{ scale: imageScale }}
+								className={styles.inner}
+							>
 								<Image fill src={`/images/${src}`} alt="image" />
 							</motion.div>
 						</div>
 					</div>
 				</Link>
 			</div>
-		</div >
+		</div>
 	);
 };
 
