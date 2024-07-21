@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import { projects } from "@/content/data";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Link from "next/link";
 
 export default function Page() {
 
@@ -19,7 +20,9 @@ export default function Page() {
     const project = projects.find(project => project.link === pathName)
     return (
         <div className="flex flex-col justify-center h-[100dvh] w-[500dvh] overflow-y-hidden">
-            {project?.title}
+            <Link href="/">
+                {project?.title}
+            </Link>
         </div>
     );
 }

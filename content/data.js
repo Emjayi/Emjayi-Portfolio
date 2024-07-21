@@ -35,5 +35,45 @@ export const projects = [
 
         color: "#00a0d199"
 
-    }
+    },
+    {
+
+        title: "Zissou",
+
+        description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+
+        src: "officestudio.png",
+
+        link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+
+        color: "#00a0d199"
+
+    },
+    {
+
+        title: "Zissou",
+
+        description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+
+        src: "officestudio.png",
+
+        link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+
+        color: "#00a0d199"
+
+    },
+    {
+
+        title: "Zissou",
+
+        description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+
+        src: "officestudio.png",
+
+        link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+
+        color: "#00a0d199"
+
+    },
+
 ]

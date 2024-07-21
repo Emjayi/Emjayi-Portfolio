@@ -1,17 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Particles from "./components/particles";
 import { AnimatePresence, motion } from "framer-motion";
 import Preloader from "./components/Preloader";
-import Magnetic from "./common/Magnetic";
 import { ThemeSwitcher } from "./components/theme-switcher";
 import { ThemeProvider } from "./theme-provider";
-import ParticlesLight from "./components/particles-light";
 import Projects from "./components/projects";
 import Lenis from 'lenis'
 import Footer from "./components/Footer";
-import { Link as ScrollLink } from 'react-scroll';
 import Hero from "./components/Hero";
 
 
@@ -53,6 +48,8 @@ export default function Home() {
           <div className="" >
             <h2 className="w-full text-md text-center uppercase -mb-12 bold">Latest Projects</h2>
             <Projects />
+            {/* <h2 className="w-full mt-64 text-md text-center uppercase bold">Collabrations</h2>
+            <Projects /> */}
           </div>
         </div>
       </div>

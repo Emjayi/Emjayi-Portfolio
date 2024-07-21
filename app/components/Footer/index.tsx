@@ -118,7 +118,7 @@ const Section1 = () => {
             <h1 className='absolute block sm:hidden w-[100dvw] text-center right-0 top-48'>Need a fullstack developer?</h1>
             <p className='absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56'>Give me a call.</p>
             <div className='h-full hidden lg:flex flex-col justify-end'>
-                <TextGenerateEffect words={description} className="animate-fade-in-1 justify-self-start px-5 mb-4" />
+                <TextGenerateEffect words={description} className="animate-fade-in-1 max-w-[550px] text-justify justify-self-start px-5 mb-4" />
                 <div className="animate-fade-in-1 flex py-5 px-10 gap-3 flex-wrap justify-center">
                     <AnimatedTooltip items={tech} />
                 </div>
