@@ -5,6 +5,7 @@ import { ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from "lucide-react";
 import { TextGenerateEffect } from "@/app/ui/text-generator";
 import { AnimatedTooltip } from "@/app/ui/tooltip";
 import { Link as ScrollLink } from "react-scroll";
+import { usePathname } from "next/navigation";
 
 const tech = [
 	{
@@ -75,6 +76,7 @@ const socials = [
 ];
 
 export default function Footer() {
+	const pathName = usePathname()
 	return (
 		<div
 			className="relative h-[800px]"
@@ -96,7 +98,7 @@ export default function Footer() {
 							<ArrowUpIcon width={25} height={25} />
 						</ScrollLink>
 
-						<ScrollLink
+						{(pathName === "/") && <ScrollLink
 							to="projects"
 							smooth={true}
 							duration={1200}
@@ -104,7 +106,7 @@ export default function Footer() {
 							className="absolute hidden lg:flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
 						>
 							<h2 className=" text-lg">Projects</h2>
-						</ScrollLink>
+						</ScrollLink>}
 					</div>
 				</div>
 			</div>

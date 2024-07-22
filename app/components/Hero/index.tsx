@@ -6,10 +6,13 @@ import Particles from "../particles";
 import ParticlesLight from "../particles-light";
 import { useRef } from "react";
 import Magnetic from "@/app/common/Magnetic";
+import Link from "next/link";
 
 const navigation = [
-	{ name: "Contact", href: "contacts" },
 	{ name: "Projects", href: "projects" },
+	{ name: "Experiences", href: "experiences" },
+	{ name: "Blog", href: "/blog" },
+	{ name: "Contact", href: "contacts" },
 ];
 
 export default function Hero() {
@@ -35,7 +38,12 @@ export default function Hero() {
 					{navigation.map((item, index) => (
 						<Magnetic key={index}>
 							<li>
-								<ScrollLink
+								{item.href.includes("/") ? (<Link
+									href={`${item.href}`}
+									className=" cursor-pointer block text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+								>
+									{item.name}
+								</Link>) : (<ScrollLink
 									to={`${item.href}`}
 									smooth={true}
 									duration={1200}
@@ -43,7 +51,7 @@ export default function Hero() {
 									className=" cursor-pointer block text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
 								>
 									{item.name}
-								</ScrollLink>
+								</ScrollLink>)}
 							</li>
 						</Magnetic>
 					))}

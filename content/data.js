@@ -7,6 +7,8 @@ export const projects = [
 
 		src: "baroque.png",
 
+		images: [],
+
 		link: "/baroque",
 
 		color: "#85700080",

@@ -80,24 +80,24 @@ export default function RootLayout({
 				className={` bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
 					}`}
 			>
-				<div className="hidden md:flex">
-					<AnimatedCursor
-						innerSize={8}
-						outerSize={30}
-						innerScale={1}
-						outerScale={1.4}
-						outerAlpha={0}
-						outerStyle={{
-							border: "2px solid #555",
-						}}
-						innerStyle={{
-							backgroundColor: "var(--cursor-inner)",
-						}}
-						showSystemCursor={true}
-					/>
-				</div>
 				{/* <Header navItems={navItems} isVisible={true} /> */}
 				{children}
+				{/* <div className="hidden md:flex"> */}
+				<AnimatedCursor
+					innerSize={8}
+					outerSize={30}
+					innerScale={1}
+					outerScale={1.4}
+					outerAlpha={0}
+					outerStyle={{
+						border: "2px solid #555",
+					}}
+					innerStyle={{
+						backgroundColor: "var(--cursor-inner)",
+					}}
+					showSystemCursor={true}
+				/>
+				{/* </div> */}
 			</body>
 		</html>
 	);
