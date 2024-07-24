@@ -8,16 +8,9 @@ import Projects from "./components/projects";
 import Lenis from "lenis";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Tools from "./components/Tools";
 
 export default function Home() {
-	useEffect(() => {
-		const lenis = new Lenis();
-		function raf(time: any) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-		requestAnimationFrame(raf);
-	}, []);
 
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -47,6 +40,7 @@ export default function Home() {
 							Latest Projects
 						</h2>
 						<Projects />
+						<Tools />
 					</div>
 				</div>
 			</div>
