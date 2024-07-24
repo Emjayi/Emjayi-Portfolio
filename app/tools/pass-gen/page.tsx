@@ -32,7 +32,7 @@ export default function PasswordGenerator() {
             <div className='flex flex-col gap-2 justify-center items-center p-6 bg-zinc-800 rounded-md text-white w-[40%] h-[50%]'>
                 <label>
                     Length:
-                    <input type="text" value={length} onChange={(e) => setLength(e.target.value)} className='bg-zinc-700 rounded-md text-white text-center w-12' />
+                    <input type="text" value={length} onChange={(e) => setLength(Number(e.target.value))} className='bg-zinc-700 rounded-md text-white text-center w-12' />
                 </label>
                 <label>
                     Include Symbols:
