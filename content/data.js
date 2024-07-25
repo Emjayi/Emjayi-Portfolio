@@ -36,3 +36,62 @@ export const projects = [
 		color: "#00a0d199",
 	},
 ];
+
+export const tools = [
+	{
+		name: "To-Do List",
+		href: "todo-list"
+	},
+	{
+		name: "Calculator",
+		href: "calculator"
+	},
+	{
+		name: "Weather Widget",
+		href: "weather"
+	},
+	{
+		name: "Password Generator",
+		href: "pass-gen"
+	},
+	{
+		name: "Countdown Timer",
+		href: "countdown"
+	},
+	{
+		name: "Image Compressor",
+		href: "img-compressor"
+	},
+	{
+		name: "String splitter",
+		href: "string-splitter"
+	},
+	{
+		name: "Random Quote Generator",
+		href: "quote-gen"
+	},
+	{
+		name: "Currency Converter",
+		href: "cur-converter"
+	},
+	{
+		name: "Expense Tracker",
+		href: "exp-tracker"
+	},
+	{
+		name: "Markdown Previewer",
+		href: "markdown-previewer"
+	},
+	{
+		name: "Pomodoro Timer",
+		href: "pomodoro"
+	},
+	{
+		name: "Recipe Finder",
+		href: "recipe-finder"
+	},
+	{
+		name: "Movie Search",
+		href: "movie-search"
+	},
+]

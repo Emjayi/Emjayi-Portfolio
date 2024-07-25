@@ -9,6 +9,7 @@ import Lenis from "lenis";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Tools from "./components/Tools";
+import Experience from "./components/Experience";
 
 export default function Home() {
 
@@ -41,6 +42,7 @@ export default function Home() {
 						</h2>
 						<Projects />
 						<Tools />
+						<Experience />
 					</div>
 				</div>
 			</div>

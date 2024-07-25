@@ -8,12 +8,14 @@ export default function PasswordGenerator() {
     const [password, setPassword] = useState('');
     const [length, setLength] = useState(12);
     const [includeSymbols, setIncludeSymbols] = useState(true);
+    const [includeNumbers, setIncludeNumbers] = useState(true);
     const [useSHA256, setUseSHA256] = useState(false);
 
     const generatePassword = () => {
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         const symbols = '!@#$%^&*()';
-        const selectedChars = chars + (includeSymbols ? symbols : '');
+        const numbers = '0123456789';
+        const selectedChars = chars + (includeSymbols ? symbols : '') + (includeNumbers ? numbers : '');
         let newPassword = '';
         for (let i = 0; i < length; i++) {
             newPassword += selectedChars.charAt(Math.floor(Math.random() * selectedChars.length));
@@ -27,25 +29,30 @@ export default function PasswordGenerator() {
     };
 
     return (
-        <div className='flex flex-col gap-3 justify-center items-center w-[100dw] h-[100dvh]'>
-            <h1 className='text-xl'>Password Generator</h1>
-            <div className='flex flex-col gap-2 justify-center items-center p-6 bg-zinc-800 rounded-md text-white w-[40%] h-[50%]'>
-                <label>
-                    Length:
-                    <input type="text" value={length} onChange={(e) => setLength(Number(e.target.value))} className='bg-zinc-700 rounded-md text-white text-center w-12' />
-                </label>
-                <label>
-                    Include Symbols:
-                    <input type="checkbox" checked={includeSymbols} onChange={() => setIncludeSymbols(!includeSymbols)} />
-                </label>
-                <label>
-                    Use SHA-256:
-                    <input type="checkbox" checked={useSHA256} onChange={() => setUseSHA256(!useSHA256)} />
-                </label>
-                <button onClick={generatePassword} className='bg-zinc-700 p-2 text-white rounded-md'>Generate Password</button>
-                <p>{password}</p>
-            </div>
-        </div>
+        <>
+            <label className='flex items-center w-36 gap-2'>
+                Length:
+                <select value={length} onChange={(e) => setLength(Number(e.target.value))} className='bg-zinc-700 p-2 text-white rounded-md w-full flex-[5]'>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                </select>
+            </label>
+            <label>
+                Include Symbols:
+                <input type="checkbox" checked={includeSymbols} onChange={() => setIncludeSymbols(!includeSymbols)} />
+            </label>
+            <label>
+                Include Numbers:
+                <input type="checkbox" checked={includeNumbers} onChange={() => setIncludeNumbers(!includeNumbers)} />
+            </label>
+            <label>
+                Use SHA-256:
+                <input type="checkbox" checked={useSHA256} onChange={() => setUseSHA256(!useSHA256)} />
+            </label>
+            <button onClick={generatePassword} className='bg-zinc-700 p-2 text-white rounded-md'>Generate Password</button>
+            <p>{password}</p>
+        </>
     );
 }
 
