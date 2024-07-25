@@ -18,24 +18,6 @@ export default function QuoteGenerator() {
         }
     };
 
-    const event = new KeyboardEvent('keydown', { key: 'Enter', code: 'Enter', which: 13, keyCode: 13, });
-    useEffect(() => {
-        const handleKeyDown = () => {
-            if (event) {
-                // Do something when Enter is pressed
-                console.log('Enter key pressed');
-                // You can also call any function here
-            }
-        };
-
-        document.addEventListener('keydown', handleKeyDown);
-
-        // Clean up the event listener when the component is unmounted
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, []);
-
     return (
         <>
             <p className=' text-center text-xl lg:text-3xl'>{quote}</p>
