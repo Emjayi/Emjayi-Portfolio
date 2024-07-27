@@ -87,11 +87,47 @@ export const tools = [
 		href: "pomodoro"
 	},
 	{
-		name: "Recipe Finder",
-		href: "recipe-finder"
+		name: "Color Picker",
+		href: "color-picker"
 	},
 	{
-		name: "Movie Search",
-		href: "movie-search"
+		name: "JSON Formatter",
+		href: "json-formatter"
+	},
+	{
+		name: "CSS Minifier",
+		href: "css-minifier"
+	},
+	{
+		name: "QR Code Generator",
+		href: "qr-code-gen"
+	},
+	{
+		name: "Lorem Ipsum Generator",
+		href: "lorem-ipsum-gen"
+	},
+	{
+		name: "Unit Converter",
+		href: "unit-converter"
+	},
+	{
+		name: "Regular Expression Tester",
+		href: "regex-tester"
+	},
+	{
+		name: "CSS Gradient Generator",
+		href: "css-gradient-gen"
+	},
+	{
+		name: "Text Diff Checker",
+		href: "text-diff-checker"
+	},
+	{
+		name: "Text to Speech",
+		href: "text-to-speech"
+	},
+	{
+		name: "HTML Minifier",
+		href: "html-minifier"
 	},
 ]

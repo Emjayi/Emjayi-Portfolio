@@ -12,7 +12,9 @@ export default function Index() {
         damping: 200
     })
     const x = useTransform(smoothScroll, [0, 1], [-300, 100])
-    const x2 = useTransform(smoothScroll, [0, 1], [200, -200])
+    const x2 = useTransform(smoothScroll, [0, 1], [200, -300])
+    const x3 = useTransform(smoothScroll, [0, 1], [-500, 200])
+    const x4 = useTransform(smoothScroll, [0, 1], [600, -400])
     return (
         <div className="flex flex-col w-screen gap-2 flex-wrap justify-center items-center" ref={ref}>
             <div className="hidden md:flex flex-col w-full gap-4 flex-wrap justify-center items-center">
@@ -30,10 +32,33 @@ export default function Index() {
                     className="flex gap-2 -mr-64">
                     {tools.map((t, index) => (
                         <>
-                            {(index > 6) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                            {(index > 6 && index < 12) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
                         </>
                     ))}
                 </motion.div>
+                <motion.div
+                    style={{ x: x3 }}
+                    className="flex gap-2 -mr-64">
+                    {tools.map((t, index) => (
+                        <>
+                            {(index > 12 && index < 18) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </>
+                    ))}
+                </motion.div>
+                <motion.div
+                    style={{ x: x4 }}
+                    className="flex gap-2">
+                    {tools.map((t, index) => (
+                        <>
+                            {(index > 18) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </>
+                    ))}
+                </motion.div>
+            </div>
+            <div className="flex w-full px-5 gap-4 flex-wrap justify-center items-center md:hidden">
+                {tools.map((t, index) => (
+                    <Link key={"m_" + index} href={`/tools/${t.href}`}><HoverBorderGradient className="text-sm py-2 px-4 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>
+                ))}
             </div>
         </div>
     );

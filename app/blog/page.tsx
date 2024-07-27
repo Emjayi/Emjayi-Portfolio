@@ -3,7 +3,7 @@ import { HoverBorderGradient } from "../ui/Hover-Border-Gradient";
 
 export default function Page() {
     return (
-        <div className="flex bg-zinc-300 dark:bg-zinc-800 rounded-t-2xl -mt-10">
+        <div className="flex bg-zinc-300 dark:bg-zinc-800 rounded-2xl">
             <div className="hidden lg:flex text-zinc-600 dark:text-zinc-400 flex-col gap-5 w-[20%] my-8 p-4 sticky top-0 h-fit">
                 <div>
                     <h3 className="text-xl mb-2 text-zinc-800 dark:text-white">Latest Posts</h3>

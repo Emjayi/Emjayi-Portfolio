@@ -12,13 +12,13 @@ import { tools } from "@/content/data";
 export default function Page() {
     return (
         <>
-            <div id="home" className="h-96  flex flex-col gap-4 justify-center items-center" style={{ backgroundImage: "" }}>
+            <div id="home" className="h-64  flex flex-col gap-4 justify-center items-center" style={{ backgroundImage: "" }}>
                 <h1 className="text-6xl capitalize">Tools</h1>
                 <Link href="/" className="flex capitalize hover:text-zinc-500 dark:hover:text-zinc-400 duration-300"><ArrowLeft width={18} /> <p>back to home</p></Link>
             </div>
             <div className="flex flex-wrap justify-center w-full px-[10%] pb-[10%] gap-5">
-                {tools.map((t) => (
-                    <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>
+                {tools.map((t, index) => (
+                    <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>
                 ))}
             </div>
             <Footer />

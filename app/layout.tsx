@@ -83,7 +83,7 @@ export default function RootLayout({
 				{/* <Header navItems={navItems} isVisible={true} /> */}
 				{children}
 				{/* <div className="hidden md:flex"> */}
-				<AnimatedCursor
+				{/* <AnimatedCursor
 					innerSize={8}
 					outerSize={30}
 					innerScale={1}
@@ -96,7 +96,7 @@ export default function RootLayout({
 						backgroundColor: "var(--cursor-inner)",
 					}}
 					showSystemCursor={true}
-				/>
+				/> */}
 				{/* </div> */}
 			</body>
 		</html>
