@@ -59,14 +59,14 @@ export default function Hero() {
 				</ul>
 			</nav>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-			<ParticlesLight
+			{/* <ParticlesLight
 				className="absolute dark:invisible inset-0 -z-10 animate-fade-in"
 				quantity={300}
 			/>
 			<Particles
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={300}
-			/>
+			/> */}
 			<motion.h1
 				style={{ y: y }}
 				className="z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"

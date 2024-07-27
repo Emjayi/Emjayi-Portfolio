@@ -15,14 +15,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ThemeSwitcher />
             <section className="w-[100dw] bg-zinc-600/20 text-zinc-900 dark:text-white">
                 {!(pathName === "/tools") && <Link href="/tools" className="absolute top-0 mr-auto ml-auto text-center p-6 text-zinc-900 dark:text-white"><p className="uppercase">back</p></Link>}
-                <ParticlesLight
+                {/* <ParticlesLight
                     className="absolute dark:invisible inset-0 -z-10 animate-fade-in"
                     quantity={100}
                 />
                 <Particles
                     className="absolute inset-0 -z-10 animate-fade-in"
                     quantity={100}
-                />
+                /> */}
                 {!(pathName === "/tools") &&
                     <div className='flex flex-col gap-3 justify-center items-center w-[100dw] h-[100dvh]'>
                         <h1 className='linear-wipe-for text-2xl font-bold'>{tool?.name}</h1>
