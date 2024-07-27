@@ -1,4 +1,4 @@
-// pages/expense-tracker.tsx
+'use client'
 import { useState } from 'react';
 
 interface Expense {

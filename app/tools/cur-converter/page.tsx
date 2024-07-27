@@ -1,3 +1,4 @@
+'use client'
 // pages/currency-converter.tsx
 import { useState, useEffect } from 'react';
 

@@ -1,3 +1,4 @@
+'use client'
 // pages/css-gradient-gen.tsx
 import { useState } from 'react';
 
