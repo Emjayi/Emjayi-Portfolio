@@ -22,42 +22,42 @@ export default function Index() {
                     style={{ x: x }}
                     className="flex gap-2 -ml-24">
                     {tools.map((t, index) => (
-                        <>
-                            {(index < 6) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
-                        </>
+                        <div key={index}>
+                            {(index < 6) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </div>
                     ))}
                 </motion.div>
                 <motion.div
                     style={{ x: x2 }}
                     className="flex gap-2 -mr-64">
                     {tools.map((t, index) => (
-                        <>
-                            {(index > 6 && index < 12) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
-                        </>
+                        <div key={index}>
+                            {(index > 6 && index < 12) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </div>
                     ))}
                 </motion.div>
                 <motion.div
                     style={{ x: x3 }}
                     className="flex gap-2 -mr-64">
                     {tools.map((t, index) => (
-                        <>
-                            {(index > 12 && index < 18) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
-                        </>
+                        <div key={index}>
+                            {(index > 12 && index < 18) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </div>
                     ))}
                 </motion.div>
                 <motion.div
                     style={{ x: x4 }}
                     className="flex gap-2">
                     {tools.map((t, index) => (
-                        <>
-                            {(index > 18) && <Link key={index} href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
-                        </>
+                        <div key={index}>
+                            {(index > 18) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                        </div>
                     ))}
                 </motion.div>
             </div>
             <div className="flex w-full px-5 gap-4 flex-wrap justify-center items-center md:hidden">
                 {tools.map((t, index) => (
-                    <Link key={"m_" + index} href={`/tools/${t.href}`}><HoverBorderGradient className="text-sm py-2 px-4 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>
+                    <Link key={100 + index} href={`/tools/${t.href}`}><HoverBorderGradient className="text-sm py-2 px-4 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>
                 ))}
             </div>
         </div>

@@ -10,7 +10,7 @@ const Card = ({ title, description, src, link, color, i }: any) => {
 
 	const { scrollYProgress } = useScroll({
 		target: container,
-
+		layoutEffect: false,
 		offset: ["start end", "start start"],
 	});
 
@@ -32,7 +32,7 @@ const Card = ({ title, description, src, link, color, i }: any) => {
 
 					<div className={styles.imageContainer}>
 						<motion.div style={{ scale: imageScale }} className={styles.inner}>
-							<Image fill src={`/images/${src}`} alt="image" />
+							<Image fill src={`/images/${src}`} sizes="500" alt="image" />
 						</motion.div>
 					</div>
 				</div>

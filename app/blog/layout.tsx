@@ -15,7 +15,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const pageName = usePathname().split("/")[1];
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
-        target: ref
+        target: ref,
+        layoutEffect: false
     })
     const s = useTransform(scrollYProgress, [0, 1], [180, -500])
     return (
