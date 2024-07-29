@@ -20,6 +20,7 @@ export const ThemeSwitcher = () => {
 			className={
 				"w-fit fixed right-0 top-1 z-50 rounded-md animate-fade-in text-md duration-500 p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300"
 			}
+			name="Theme Switcher"
 			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 		>
 			<div className="hidden dark:block">

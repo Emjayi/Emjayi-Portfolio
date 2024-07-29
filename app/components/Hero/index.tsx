@@ -80,27 +80,27 @@ export default function Hero() {
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
-				<motion.h3
+				<motion.p
 					style={{ y: y2 }}
 					className="linear-wipe-sec text-sm md:text-xl font-bold"
 				>
 					Design.
-				</motion.h3>
-				<motion.h3
+				</motion.p>
+				<motion.p
 					style={{ y: y4 }}
 					className="linear-wipe-thr text-sm md:text-xl font-bold"
 				>
 					Develop.
-				</motion.h3>
-				<motion.h3
+				</motion.p>
+				<motion.p
 					style={{ y: y6 }}
 					className="linear-wipe-for text-sm md:text-xl font-bold"
 				>
 					Create.
-				</motion.h3>
+				</motion.p>
 			</div>
 			<div className="mb-8 mt-4 text-center animate-fade-in">
-				<h3 className="text-sm text-zinc-500 ">Keep it simple.</h3>
+				<h2 className="text-sm text-zinc-500 ">Keep it simple.</h2>
 			</div>
 		</div>
 	);
