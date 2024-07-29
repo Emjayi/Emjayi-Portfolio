@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import { ArrowLeft } from "lucide-react";
 import Particles from "../components/particles";
 import ParticlesLight from "../components/particles-light";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { opacity } from "../components/Preloader/anim";
 
@@ -18,7 +18,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         target: ref,
         layoutEffect: false
     })
-    const s = useTransform(scrollYProgress, [0, 1], [180, -500])
+    const smoothScroll = useSpring(scrollYProgress, {
+        damping: 40,
+        stiffness: 300
+    })
+    const s = useTransform(smoothScroll, [0, 1], [160, -600])
     return (
         <ThemeProvider attribute="class" defaultTheme="system">
             <ThemeSwitcher />
@@ -38,9 +42,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         className="absolute inset-0 -z-10 animate-fade-in"
                         quantity={1200}
                     /> */}
-                    <motion.div
-                        style={{ y: s }}
-                        ref={ref}><Link href="/" className="flex capitalize hover:text-zinc-500 dark:hover:text-zinc-400 duration-300"><ArrowLeft width={18} /><p>back to home</p></Link></motion.div>
                 </div>
                 <div className="bg-[#EDEDEE] dark:bg-[#080809]">
 

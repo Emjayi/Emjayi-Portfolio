@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, use } from "react";
 import { useMousePosition } from "@/util/mouse";
+import { useScroll, useTransform, useVelocity } from "framer-motion";
 
 interface ParticlesProps {
 	className?: string;
@@ -14,7 +15,7 @@ interface ParticlesProps {
 export default function Particles({
 	className = "",
 	quantity = 30,
-	staticity = 50,
+	staticity = 30,
 	ease = 50,
 	refresh = true,
 }: ParticlesProps) {
@@ -26,6 +27,11 @@ export default function Particles({
 	const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
 	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+
+	const { scrollYProgress } = useScroll();
+	const y = useTransform(scrollYProgress, [0, 1], [0, -600]);
+	const yVelocity = useVelocity(scrollYProgress);
+	const yv = useTransform(yVelocity, [10000, -10000], [5, 0]);
 
 	useEffect(() => {
 		if (canvasRef.current) {
@@ -72,6 +78,8 @@ export default function Particles({
 		y: number;
 		translateX: number;
 		translateY: number;
+		scaleX: number;
+		scaleY: number;
 		size: number;
 		alpha: number;
 		targetAlpha: number;
@@ -98,7 +106,9 @@ export default function Particles({
 		const y = Math.floor(Math.random() * canvasSize.current.h);
 		const translateX = 0;
 		const translateY = 0;
-		const size = Math.floor(Math.random() * 2) + 0.1;
+		const scaleX = 1;
+		const scaleY = 1;
+		const size = Math.floor(Math.random() * 2) + 0.3;
 		const alpha = 0;
 		const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
 		const dx = (Math.random() - 0.5) * 0.2;
@@ -109,6 +119,8 @@ export default function Particles({
 			y,
 			translateX,
 			translateY,
+			scaleX,
+			scaleY,
 			size,
 			alpha,
 			targetAlpha,
@@ -120,8 +132,9 @@ export default function Particles({
 
 	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
-			const { x, y, translateX, translateY, size, alpha } = circle;
+			const { x, y, translateX, translateY, size, alpha, scaleY, scaleX } = circle;
 			context.current.translate(translateX, translateY);
+			context.current.scale(scaleX, scaleY);
 			context.current.beginPath();
 			context.current.arc(x, y, size, 0, 2 * Math.PI);
 			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
@@ -196,6 +209,7 @@ export default function Particles({
 			circle.translateY +=
 				(mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
 				ease;
+
 			// circle gets out of the canvas
 			if (
 				circle.x < -circle.size ||

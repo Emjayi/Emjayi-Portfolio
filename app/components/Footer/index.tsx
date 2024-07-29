@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "../card";
 import Link from "next/link";
-import { ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from "lucide-react";
+import { ArrowLeft, ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from "lucide-react";
 import { TextGenerateEffect } from "@/app/ui/text-generator";
 import { AnimatedTooltip } from "@/app/ui/tooltip";
 import { Link as ScrollLink } from "react-scroll";
@@ -88,25 +88,35 @@ export default function Footer() {
 						<Section1 />
 						<Section2 />
 
-						<ScrollLink
+						{(pathName === "/") && <ScrollLink
 							to="home"
 							smooth={true}
 							duration={1200}
-							className="absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+							className="absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
 						>
-							<h2 className=" text-lg">Back to top</h2>
-							<ArrowUpIcon width={25} height={25} />
-						</ScrollLink>
-
-						{(pathName === "/") && <ScrollLink
-							to="projects"
-							smooth={true}
-							duration={1200}
-							offset={120}
-							className="absolute hidden lg:flex items-center gap-2 bottom-16 right-52 cursor-pointer text-sm duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
-						>
-							<h2 className=" text-lg">Projects</h2>
+							<ArrowUpIcon width={22} height={22} />
+							<p >Back to top</p>
 						</ScrollLink>}
+						{(pathName !== "/") && (<>
+							<Link
+								href="/"
+								className="absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								<ArrowLeft width={22} height={22} />
+								<p>back to home</p>
+							</Link>
+						</>)}
+						<div className="absolute flex bottom-4 right-16">
+							{(pathName !== "/tools") && <Link
+								href="/tools"
+								className="hidden lg:flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								<p>Tools</p>
+							</Link>}
+							{(pathName !== "/blog") && <Link
+								href="/blog"
+								className="hidden lg:flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								<p>Blog</p>
+							</Link>}
+						</div>
 					</div>
 				</div>
 			</div>

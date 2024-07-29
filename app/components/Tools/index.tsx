@@ -11,19 +11,19 @@ export default function Index() {
         stiffness: 300,
         damping: 200
     })
-    const x = useTransform(smoothScroll, [0, 1], [-300, 100])
+    const x = useTransform(smoothScroll, [0, 1], [-100, 100])
     const x2 = useTransform(smoothScroll, [0, 1], [200, -300])
-    const x3 = useTransform(smoothScroll, [0, 1], [-500, 200])
+    const x3 = useTransform(smoothScroll, [0, 1], [-800, 200])
     const x4 = useTransform(smoothScroll, [0, 1], [600, -400])
     return (
-        <div className="flex flex-col w-screen gap-2 flex-wrap justify-center items-center" ref={ref}>
+        <div className="flex flex-col mt-4 md:mt-24 w-screen gap-2 flex-wrap justify-center items-center" ref={ref}>
             <div className="hidden md:flex flex-col w-full gap-4 flex-wrap justify-center items-center">
                 <motion.div
                     style={{ x: x }}
-                    className="flex gap-2 -ml-24">
+                    className="flex gap-2 ml-24">
                     {tools.map((t, index) => (
                         <div key={index}>
-                            {(index < 6) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                            {(index < 5) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
                         </div>
                     ))}
                 </motion.div>
@@ -32,7 +32,7 @@ export default function Index() {
                     className="flex gap-2 -mr-64">
                     {tools.map((t, index) => (
                         <div key={index}>
-                            {(index > 6 && index < 12) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
+                            {(index > 5 && index < 12) && <Link href={`/tools/${t.href}`}><HoverBorderGradient className=" py-4 px-8 inline"><p className="">{t.name}</p></HoverBorderGradient></Link>}
                         </div>
                     ))}
                 </motion.div>

@@ -68,14 +68,14 @@ export default function Hero() {
 				quantity={300}
 			/>
 			<motion.h1
-				style={{ y: y }}
+				style={{ y: y2 }}
 				className="z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
 			>
 				<motion.span className=" linear-wipe-fir lowercase">E</motion.span>
-				<motion.span className="">M</motion.span>
-				<motion.span className="">J</motion.span>
-				<motion.span className="">A</motion.span>
-				<motion.span style={{ y: y1 }}>Y</motion.span>
+				<motion.span >M</motion.span>
+				<motion.span >J</motion.span>
+				<motion.span >A</motion.span>
+				<motion.span >Y</motion.span>
 			</motion.h1>
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
