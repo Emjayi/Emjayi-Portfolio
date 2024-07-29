@@ -39,7 +39,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/_app.tsx",
-    "app/common/Magnetic/index.jsx"
+    "app/common/Magnetic/index.jsx",
+    "app/components/MyCard/index.jsx"
   ],
   "exclude": [
     "node_modules"

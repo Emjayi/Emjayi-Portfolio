@@ -4,9 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import Particles from "../particles";
 import ParticlesLight from "../particles-light";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Magnetic from "@/app/common/Magnetic";
 import Link from "next/link";
+import MyCard from "@/app/components/MyCard";
 
 const navigation = [
 	{ name: "Projects", href: "projects" },
@@ -17,6 +18,8 @@ const navigation = [
 ];
 
 export default function Hero() {
+	const [render, setRender] = useState(false)
+	setTimeout(() => setRender(true), 3200)
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll();
 	const y = useTransform(scrollYProgress, [0, 1], [0, -600]);
@@ -34,6 +37,9 @@ export default function Hero() {
 			className=" flex flex-col items-center justify-center w-screen h-[100dvh]"
 			ref={ref}
 		>
+			<div className="absolute top-0 h-full w-[99%] bg-transparent">
+				{render && <MyCard />}
+			</div>
 			<nav className="pb-6 md:pb-0 md:my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-2 md:gap-6">
 					{navigation.map((item, index) => (
@@ -77,7 +83,6 @@ export default function Hero() {
 				<motion.span >A</motion.span>
 				<motion.span >Y</motion.span>
 			</motion.h1>
-
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
 				<motion.p

@@ -1,3 +1,4 @@
+import MyCard from "../MyCard";
 
 const exp = [
     {
@@ -64,6 +65,7 @@ const std = [
 export default function Index() {
     return (
         <div id="experiences" className="flex flex-col justify-center items-center w-full pt-24">
+
             <h1 className="text-xl mb-5 self-start mt-12 px-[10%]">Experiences</h1>
             {exp.map((e, index) => (
                 <div
