@@ -100,20 +100,20 @@ export default function Footer() {
 						{(pathName !== "/") && (<>
 							<Link
 								href="/"
-								className="absolute hidden lg:flex items-center gap-2 bottom-16 right-16 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								className="absolute hidden lg:flex items-center gap-2 bottom-16 lg:right-16 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
 								<ArrowLeft width={22} height={22} />
 								<p>back to home</p>
 							</Link>
 						</>)}
-						<div className="absolute flex bottom-4 right-16">
+						<div className="absolute flex bottom-4 lg:right-16">
 							{(pathName !== "/tools") && <Link
 								href="/tools"
-								className="hidden lg:flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								className="flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
 								<p>Tools</p>
 							</Link>}
 							{(pathName !== "/blog") && <Link
 								href="/blog"
-								className="hidden lg:flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
+								className="flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
 								<p>Blog</p>
 							</Link>}
 						</div>
@@ -125,8 +125,26 @@ export default function Footer() {
 }
 
 const Section1 = () => {
+	const pathName = usePathname()
 	return (
 		<div className="flex justify-between items-center">
+			{(pathName === "/") && <ScrollLink
+				to="home"
+				smooth={true}
+				duration={1200}
+				className="absolute flex gap-2 justify-center sm:hidden w-[100dvw] text-center right-0 top-32"
+			>
+				<ArrowUpIcon width={22} height={22} />
+				<p >Back to top</p>
+			</ScrollLink>}
+			{(pathName !== "/") && (<>
+				<Link
+					href="/"
+					className="absolute flex gap-2 justify-center sm:hidden w-[100dvw] text-center right-0 top-32">
+					<ArrowLeft width={22} height={22} />
+					<p>back to home</p>
+				</Link>
+			</>)}
 			<h1 className="absolute block sm:hidden w-[100dvw] text-center right-0 top-48">
 				Need a fullstack developer?
 			</h1>
@@ -151,7 +169,7 @@ const Section2 = () => {
 	return (
 		<div
 			id="contacts"
-			className="flex justify-center lg:justify-between items-end"
+			className="hidden lg:flex justify-center lg:justify-between items-end"
 		>
 			<h1 className="text-[10vw] leading-[0.8] mt-10">Let's talk</h1>
 		</div>

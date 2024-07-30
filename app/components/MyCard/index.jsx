@@ -13,7 +13,7 @@ useTexture.preload('/card/band.jpg')
 export default function MyCard() {
     // const { debug } = useControls({ debug: false })
     return (
-        <Canvas camera={{ position: [8, 0, 13], fov: 25 }}>
+        <Canvas camera={{ position: [9, 0, 13], fov: 25 }}>
             <ambientLight intensity={Math.PI} />
             <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
                 <Band />

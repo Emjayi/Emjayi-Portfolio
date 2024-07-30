@@ -31,31 +31,30 @@ export default function Page() {
 		}
 		return projects[projects.length - 1];
 	};
+	const prevproject: any = getPrevproject(projectIndex, projects);
 	return (
-		<div className="flex p-0 h-[100dvh] overflow-y-hidden w-[200dvw]">
-			<div className="h-full w-screen  items-center text-6xl gap-5 flex flex-col justify-center">
+		<div className="flex flex-col p-0 min-h-[100dvh] w-full">
+			<div className="w-full h-[100dvh] items-center text-6xl gap-5 flex flex-col justify-center">
 				{project?.title}
-				<Link
-					href={nextproject.link}
-					className="text-xl border rounded-md px-6 py-2"
-				>
-					{nextproject.title}
-				</Link>
 				<Link href="/" className="text-xl border rounded-md px-6 py-2">
 					Home
 				</Link>
 			</div>
-			<div className="h-full w-screen  items-center text-6xl gap-5 flex flex-col justify-center">
-				{project?.title}
-				<Link
-					href={nextproject.link}
-					className="text-xl border rounded-md px-6 py-2"
-				>
-					{nextproject.title}
-				</Link>
-				<Link href="/" className="text-xl border rounded-md px-6 py-2">
-					Home
-				</Link>
+			<div className="w-full items-center text-6xl gap-5 flex flex-col justify-center">
+				<div className="flex gap-2">
+					<Link
+						href={nextproject.link}
+						className="text-xl border rounded-md px-6 py-2"
+					>
+						{nextproject.title}
+					</Link>
+					<Link
+						href={prevproject.link}
+						className="text-xl border rounded-md px-6 py-2"
+					>
+						{prevproject.title}
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
