@@ -65,7 +65,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         damping: 40,
         stiffness: 300
     })
-    const s = useTransform(smoothScroll, [0, 1], [160, -600])
+    const s = useTransform(smoothScroll, [0, 1], [50, -100])
     return (
         <ThemeProvider attribute="class" defaultTheme="system">
             <ThemeSwitcher />
@@ -78,7 +78,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         transition={{ duration: 0.2 }}
                         className="text-3xl capitalize">{tool?.name}</motion.h1>}
                     {(pathName === "/tools") && <motion.h1
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1 }}
                         style={{ y: s }}
                         ref={ref}
