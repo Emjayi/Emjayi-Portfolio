@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 const QRCodeGenerator = () => {
     const [text, setText] = useState<string>('');
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+    const canvasRef = useRef<HTMLDivElement | null>(null);
 
     const downloadQRCode = () => {
         if (!canvasRef.current) return;

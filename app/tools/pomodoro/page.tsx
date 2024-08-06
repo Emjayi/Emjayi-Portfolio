@@ -8,7 +8,7 @@ const PomodoroTimer = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
 
     useEffect(() => {
-        let interval: NodeJS.Timeout;
+        let interval: any;
         if (isActive) {
             interval = setInterval(() => {
                 setTime((prevTime) => prevTime - 1);

@@ -103,20 +103,12 @@ export const tools = [
 		href: "lorem-ipsum-gen"
 	},
 	{
-		name: "Unit Converter",
-		href: "unit-converter"
-	},
-	{
 		name: "Regular Expression Tester",
 		href: "regex-tester"
 	},
 	{
 		name: "CSS Gradient Generator",
 		href: "css-gradient-gen"
-	},
-	{
-		name: "Text Diff Checker",
-		href: "text-diff-checker"
 	},
 	{
 		name: "Text to Speech",

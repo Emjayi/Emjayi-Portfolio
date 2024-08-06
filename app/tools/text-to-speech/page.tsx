@@ -30,7 +30,7 @@ const TextToSpeech = () => {
                 onChange={(e) => setText(e.target.value)}
                 className="mb-4"
             ></Textarea>
-            <Select onValueChange={(value) => setVoice(voices.find((v) => v.name === value) || null)} className="mb-4">
+            <Select onValueChange={(value) => setVoice(voices.find((v) => v.name === value) || null)} >
                 <SelectTrigger>
                     <SelectValue placeholder="Select Voice" />
                 </SelectTrigger>
