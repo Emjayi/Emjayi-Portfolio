@@ -12,27 +12,32 @@ useTexture.preload('/card/band.jpg')
 
 export default function MyCard() {
     // const { debug } = useControls({ debug: false })
+
+    const [clicked, setClicks] = useState(0)
     return (
-        <Canvas camera={{ position: [9, 0, 13], fov: 25 }}>
-            <ambientLight intensity={Math.PI} />
-            <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
-                <Band />
-            </Physics>
-            <Environment background blur={0.75}>
-                {/* <color attach="background" args={['black']} /> */}
-                <Lightformer intensity={6} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                <Lightformer intensity={3} color="#F86A1D" position={[-7, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
-                <Lightformer intensity={3} color="#06A8FF" position={[-8, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
-                <Lightformer intensity={3} color="#FF1FBB" position={[-9, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
-                <Lightformer intensity={3} color="#FFC700" position={[-12, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
-            </Environment>
-        </Canvas>
+        <>
+            <Canvas camera={{ position: [9, 0, 13], fov: 25 }} >
+                <ambientLight intensity={Math.PI} />
+                <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
+                    <Band clicks={() => setClicks(clicked + 1)} />
+                </Physics>
+                <Environment background blur={0.75}>
+                    {/* <color attach="background" args={['black']} /> */}
+                    <Lightformer intensity={6} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+                    <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+                    <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+                    <Lightformer intensity={3} color="#F86A1D" position={[-7, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                    <Lightformer intensity={3} color="#06A8FF" position={[-8, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                    <Lightformer intensity={3} color="#FF1FBB" position={[-9, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                    <Lightformer intensity={3} color="#FFC700" position={[-12, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+                </Environment>
+            </Canvas>
+            {clicked > 5 && <p className='absolute z-50 bottom-[10dvh] right-[15dvw]'>You Like it?</p>}
+        </>
     )
 }
 
-function Band({ maxSpeed = 50, minSpeed = 10 }) {
+function Band({ maxSpeed = 50, minSpeed = 10, clicks }) {
     const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
     const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
     const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
@@ -82,10 +87,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
             card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z })
         }
     })
-
     curve.curveType = 'chordal'
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping
-
     return (
         <>
             <group position={[4.5, 4, 0]}>
@@ -102,6 +105,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                 <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
                     <CuboidCollider args={[0.8, 1.125, 0.01]} />
                     <group
+                        onClick={clicks}
                         scale={2.25}
                         position={[0, -1.2, -0.05]}
                         onPointerOver={() => hover(true)}
@@ -120,6 +124,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                 <meshLineGeometry />
                 <meshLineMaterial color="white" depthTest={false} resolution={[width, height]} useMap map={texture} repeat={[-3, 1]} lineWidth={1} />
             </mesh>
+
         </>
     )
 }
