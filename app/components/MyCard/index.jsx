@@ -32,7 +32,7 @@ export default function MyCard() {
                     <Lightformer intensity={3} color="#FFC700" position={[-12, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
                 </Environment>
             </Canvas>
-            {clicked > 2 && <p className='absolute z-50 bottom-[10dvh] right-[15dvw]'>You Like it?</p>}
+            {clicked > 2 && <p className='absolute z-50 bottom-[15dvh] right-[15dvw]'>I like it too!</p>}
         </>
     )
 }
