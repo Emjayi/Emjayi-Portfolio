@@ -69,7 +69,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <ThemeProvider attribute="class" defaultTheme="system">
             <ThemeSwitcher />
-            <section className="w-[100dw] min-h-[100dvh] bg-zinc-600/20 text-zinc-900 dark:text-white">
+            <section className="w-[100dw] min-h-[100dvh] bg-zinc-600/20 text-zinc-900 dark:text-white pb-10">
                 <div id="home" className="h-64 overflow-hidden  text-zinc-900 dark:text-white flex flex-col justify-center items-center">
                     {!(pathName === "/tools") && <motion.h1
                         initial={{ opacity: 0 }}
@@ -84,8 +84,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         ref={ref}
                         transition={{ duration: 0.2 }}
                         className="text-6xl capitalize">tools</motion.h1>}
-                    {!(pathName === "/tools") && <Link href="/tools" className="absolute top-0 left-0 text-center p-6 text-zinc-900 dark:text-white"><p className="uppercase">Back</p></Link>}
-                    {!(pathName === "/tools") && <Link href="/" className="absolute top-0 left-16 text-center p-6 text-zinc-900 dark:text-white"><p className="uppercase">Home</p></Link>}
+                    {!(pathName === "/tools") && <Link href="/tools" className="absolute top-0 left-0 text-center m-6 text-zinc-900 dark:text-white"><p className="uppercase">Back</p></Link>}
+                    {!(pathName === "/tools") && <Link href="/" className="absolute top-0 left-16 text-center m-6 text-zinc-900 dark:text-white"><p className="uppercase">Home</p></Link>}
                     {/* <ParticlesLight
                         className="absolute dark:invisible inset-0 -z-10 animate-fade-in"
                         quantity={1200}

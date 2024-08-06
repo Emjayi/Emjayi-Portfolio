@@ -1,49 +1,91 @@
-'use client'
-// pages/calculator.js
+'use client';
+
 import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 export default function Calculator() {
-    const [input, setInput] = useState('');
-    const [result, setResult] = useState('');
+    const [input, setInput] = useState<string>('');
+    const [result, setResult] = useState<string>('');
 
-    const handleButtonClick = (value: any) => {
+    const handleButtonClick = (value: string) => {
         setInput((prev) => prev + value);
     };
 
     const calculateResult = () => {
         try {
-            setResult(eval(input)); // Note: eval() is dangerous and should not be used in production code.
+            const evalResult = eval(input); // Note: eval() is dangerous and should not be used in production code.
+            const resultStr = evalResult.toString();
+            setResult(resultStr);
+            setInput(resultStr);
         } catch {
             setResult('Error');
+            setInput('');
         }
     };
 
     const clearInput = () => {
         setInput('');
-        setResult("");
+        setResult('');
+    };
+
+    const handleOperatorClick = (operator: string) => {
+        if (input !== '') {
+            const lastChar = input.slice(-1);
+            if (['+', '-', '*', '/'].includes(lastChar)) {
+                setInput(input.slice(0, -1) + operator);
+            } else {
+                setInput(input + operator);
+            }
+        }
     };
 
     return (
-        <>
-            <div className='flex gap-2 w-full'>
-                <input type="text" value={input} readOnly className='bg-zinc-700 p-2 text-white rounded-md w-full flex-[5]' />
-                <button onClick={clearInput} className='bg-zinc-400 p-2 text-zinc-800 rounded-md w-full flex-1' >Clear</button>
+        <div className="flex flex-col gap-4 w-full max-w-md mx-auto p-4">
+            <div className="flex gap-2">
+                <Input
+                    type="text"
+                    value={input}
+                    readOnly
+                    className=""
+                />
+                <Button onClick={clearInput} className='bg-primary'>
+                    Clear
+                </Button>
             </div>
-            <div className='flex gap-2 w-full'>
-                <div className='grid grid-cols-3 gap-2 w-full flex-[3]'>
+            <div className="flex gap-2">
+                <div className="grid grid-cols-3 gap-2 flex-grow">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num) => (
-                        <button key={num} onClick={() => handleButtonClick(num)} className=' bg-zinc-600 p-2 text-white rounded-md'>{num}</button>
+                        <Button
+                            key={num}
+                            onClick={() => handleButtonClick(num.toString())}
+                            variant="default"
+                            className="bg-secondary text-default"
+                        >
+                            {num}
+                        </Button>
                     ))}
-                    <button onClick={calculateResult} className='bg-green-700 p-2 text-white rounded-md col-span-2'>=</button>
+                    <Button
+                        onClick={calculateResult}
+                        className="bg-green-600 dark:bg-green-900 col-span-2"
+                    >
+                        =
+                    </Button>
                 </div>
-                <div className='grid grid-cols-1 gap-2 w-full flex-1'>
+                <div className="grid grid-cols-1 gap-2">
                     {['+', '-', '*', '/'].map((op) => (
-                        <button key={op} onClick={() => handleButtonClick(op)} className='bg-zinc-700 p-2 text-white rounded-md'>{op}</button>
+                        <Button
+                            key={op}
+                            onClick={() => handleOperatorClick(op)}
+                            variant="default"
+                            className="bg-primary"
+                        >
+                            {op}
+                        </Button>
                     ))}
-                </div>
 
+                </div>
             </div>
-            {result !== null && <div className='bg-zinc-700 p-2 min-w-32 h-10 text-center text-white rounded-md'>{result}</div>}
-        </>
+        </div>
     );
 }

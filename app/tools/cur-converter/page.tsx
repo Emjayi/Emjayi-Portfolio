@@ -1,5 +1,7 @@
-'use client'
-// pages/currency-converter.tsx
+'use client';
+
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState, useEffect } from 'react';
 
 const CurrencyConverter = () => {
@@ -8,9 +10,13 @@ const CurrencyConverter = () => {
     const [rate, setRate] = useState<number | null>(null);
 
     const fetchRate = async () => {
-        const response = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
-        const data = await response.json();
-        setRate(data.rates[currency]);
+        try {
+            const response = await fetch(`https://api.exchangerate-api.com/v4/latest/USD`);
+            const data = await response.json();
+            setRate(data.rates[currency]);
+        } catch (error) {
+            console.error("Failed to fetch exchange rate:", error);
+        }
     };
 
     useEffect(() => {
@@ -18,19 +24,27 @@ const CurrencyConverter = () => {
     }, [currency]);
 
     return (
-        <div>
-            <h1>Currency Converter</h1>
-            <input
-                type="number"
-                value={amount}
-                onChange={(e) => setAmount(Number(e.target.value))}
-            />
-            <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="JPY">JPY</option>
-            </select>
-            <p>{amount} USD = {(amount * (rate ?? 0)).toFixed(2)} {currency}</p>
+        <div className='flex flex-col gap-2'>
+            <div className='flex gap-2'>
+                <Input
+                    type="number"
+                    value={amount}
+                    onChange={(e) => setAmount(Number(e.target.value))}
+                />
+                <Select value={currency} onValueChange={(value: string) => setCurrency(value)}>
+                    <SelectTrigger className="w-[80px]">
+                        <SelectValue placeholder="EUR" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        <SelectItem value="EUR">EUR</SelectItem>
+                        <SelectItem value="GBP">GBP</SelectItem>
+                        <SelectItem value="JPY">JPY</SelectItem>
+                        <SelectItem value="IRR">IRR</SelectItem>
+                    </SelectContent>
+                </Select>
+            </div>
+            <p className='w-full bg-white/40 dark:bg-black/40 p-2 rounded-lg'>{amount} USD = {(amount * (rate ?? 0)).toFixed(2)} {currency}</p>
+            <p className='w-full text-center p-2 rounded-lg'>API Reference: <a href='https://www.exchangerate-api.com/' className='text-zinc-500'>https://www.exchangerate-api.com/</a></p>
         </div>
     );
 }

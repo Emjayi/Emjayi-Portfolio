@@ -68,6 +68,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html
+			suppressHydrationWarning
 			lang="en"
 			className={`${[inter.variable, calSans.variable, telSans.variable].join(
 				" ",

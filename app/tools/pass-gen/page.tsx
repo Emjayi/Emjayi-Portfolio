@@ -1,7 +1,9 @@
-// pages/password-generator.js
-'use client'
-// pages/password-generator.js
+'use client';
+
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import crypto from 'crypto';
 
 export default function PasswordGenerator() {
@@ -29,30 +31,41 @@ export default function PasswordGenerator() {
     };
 
     return (
-        <>
-            <label className='flex items-center w-36 gap-2'>
-                Length:
-                <select value={length} onChange={(e) => setLength(Number(e.target.value))} className='bg-zinc-700 p-2 text-white rounded-md w-full flex-[5]'>
-                    <option value="12">12</option>
-                    <option value="16">16</option>
-                    <option value="18">18</option>
-                </select>
-            </label>
-            <label>
-                Include Symbols:
-                <input type="checkbox" checked={includeSymbols} onChange={() => setIncludeSymbols(!includeSymbols)} />
-            </label>
-            <label>
-                Include Numbers:
-                <input type="checkbox" checked={includeNumbers} onChange={() => setIncludeNumbers(!includeNumbers)} />
-            </label>
-            <label>
-                Use SHA-256:
-                <input type="checkbox" checked={useSHA256} onChange={() => setUseSHA256(!useSHA256)} />
-            </label>
-            <button onClick={generatePassword} className='bg-zinc-700 p-2 text-white rounded-md'>Generate Password</button>
-            <p>{password}</p>
-        </>
+        <div className="space-y-4 flex flex-col items-center space-x-2">
+            <div className="flex items-center space-x-2">
+                <span>Length:</span>
+                <Select value={length.toString()} onValueChange={(value) => setLength(Number(value))}>
+                    <SelectTrigger className="w-[80px]">
+                        <SelectValue placeholder="Select length" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        <SelectItem value="12">12</SelectItem>
+                        <SelectItem value="16">16</SelectItem>
+                        <SelectItem value="18">18</SelectItem>
+                    </SelectContent>
+                </Select>
+            </div>
+
+            <div className="flex items-center space-x-2">
+                <Checkbox id="symbols" checked={includeSymbols} onCheckedChange={setIncludeSymbols} />
+                <label htmlFor="symbols">Include Symbols</label>
+            </div>
+
+            <div className="flex items-center space-x-2">
+                <Checkbox id="numbers" checked={includeNumbers} onCheckedChange={setIncludeNumbers} />
+                <label htmlFor="numbers">Include Numbers</label>
+            </div>
+
+            <div className="flex items-center space-x-2">
+                <Checkbox id="sha256" checked={useSHA256} onCheckedChange={setUseSHA256} />
+                <label htmlFor="sha256">Use SHA-256</label>
+            </div>
+
+            <Button onClick={generatePassword} className="">
+                Generate Password
+            </Button>
+
+            <p className="text-lg font-mono text-center">{password}</p>
+        </div>
     );
 }
-

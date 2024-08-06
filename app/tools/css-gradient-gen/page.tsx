@@ -1,6 +1,8 @@
-'use client'
-// pages/css-gradient-gen.tsx
+'use client';
+
 import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 const CSSGradientGen = () => {
     const [color1, setColor1] = useState<string>('#ff0000');
@@ -14,24 +16,27 @@ const CSSGradientGen = () => {
     };
 
     return (
-        <div>
-            <h1>CSS Gradient Generator</h1>
-            <input
+        <div className="p-6">
+            <h1 className="text-2xl font-bold mb-4">CSS Gradient Generator</h1>
+            <Input
                 type="color"
                 value={color1}
                 onChange={(e) => setColor1(e.target.value)}
+                className="mb-4"
             />
-            <input
+            <Input
                 type="color"
                 value={color2}
                 onChange={(e) => setColor2(e.target.value)}
+                className="mb-4"
             />
-            <input
+            <Input
                 type="number"
                 value={angle}
                 onChange={(e) => setAngle(Number(e.target.value))}
+                className="mb-4"
             />
-            <button onClick={generateGradient}>Generate Gradient</button>
+            <Button className="mb-4" onClick={generateGradient}>Generate Gradient</Button>
             <div style={{ background: gradient, height: '200px', marginTop: '20px' }}></div>
             <p>CSS: {gradient}</p>
         </div>

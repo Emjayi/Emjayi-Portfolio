@@ -47,12 +47,12 @@ export const tools = [
 		href: "calculator"
 	},
 	{
-		name: "Weather Widget",
-		href: "weather"
-	},
-	{
 		name: "Password Generator",
 		href: "pass-gen"
+	},
+	{
+		name: "Palette Generator",
+		href: "palette-gen"
 	},
 	{
 		name: "Countdown Timer",
@@ -93,10 +93,6 @@ export const tools = [
 	{
 		name: "JSON Formatter",
 		href: "json-formatter"
-	},
-	{
-		name: "CSS Minifier",
-		href: "css-minifier"
 	},
 	{
 		name: "QR Code Generator",
