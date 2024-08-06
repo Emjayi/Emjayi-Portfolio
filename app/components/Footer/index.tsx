@@ -2,8 +2,8 @@ import React from "react";
 import { Card } from "../card";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from "lucide-react";
-import { TextGenerateEffect } from "@/app/ui/text-generator";
-import { AnimatedTooltip } from "@/app/ui/tooltip";
+import { TextGenerateEffect } from "@/app/components/ui/text-generator";
+import { AnimatedTooltip } from "@/app/components/ui/tooltip";
 import { Link as ScrollLink } from "react-scroll";
 import { usePathname } from "next/navigation";
 
@@ -105,7 +105,7 @@ export default function Footer() {
 								<p>back to home</p>
 							</Link>
 						</>)}
-						<div className="absolute flex bottom-4 lg:right-16">
+						{/* <div className="absolute flex bottom-4 lg:right-16">
 							{(pathName !== "/tools") && <Link
 								href="/tools"
 								className="flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
@@ -116,7 +116,7 @@ export default function Footer() {
 								className="flex items-center gap-2 cursor-pointer text-xl duration-500 p-2 text-zinc-600 hover:text-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300">
 								<p>Blog</p>
 							</Link>}
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

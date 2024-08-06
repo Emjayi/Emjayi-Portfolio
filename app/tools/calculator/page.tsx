@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function Calculator() {
     const [input, setInput] = useState('');
-    const [result, setResult] = useState(null || '');
+    const [result, setResult] = useState('');
 
     const handleButtonClick = (value: any) => {
         setInput((prev) => prev + value);

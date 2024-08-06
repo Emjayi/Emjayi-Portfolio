@@ -77,7 +77,7 @@ export default function RootLayout({
 				<Analytics />
 			</head>
 			<body
-				className={` bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+				className={`max-w-screen bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
 					}`}
 			>
 				{/* <Header navItems={navItems} isVisible={true} /> */}

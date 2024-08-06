@@ -1,4 +1,4 @@
-import { HoverBorderGradient } from "@/app/ui/Hover-Border-Gradient";
+import { HoverBorderGradient } from "@/app/components/ui/Hover-Border-Gradient";
 import { tools } from "@/content/data";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";

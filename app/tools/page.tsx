@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
 import { ThemeSwitcher } from "../components/theme-switcher";
 import Link from "next/link";
-import { HoverBorderGradient } from "../ui/Hover-Border-Gradient";
+import { HoverBorderGradient } from "../components/ui/Hover-Border-Gradient";
 import Particles from "../components/particles";
 import ParticlesLight from "../components/particles-light";
 import { tools } from "@/content/data";

@@ -12,7 +12,7 @@ import MyCard from "@/app/components/MyCard";
 const navigation = [
 	{ name: "Projects", href: "projects" },
 	{ name: "Experiences", href: "experiences" },
-	{ name: "Blog", href: "/blog" },
+	// { name: "Blog", href: "/blog" },
 	{ name: "Tools", href: "/tools" },
 	{ name: "Contact", href: "contacts" },
 ];
@@ -34,12 +34,12 @@ export default function Hero() {
 	return (
 		<div
 			id="home"
-			className=" flex flex-col items-center justify-center w-screen h-[100dvh]"
+			className=" flex flex-col items-center justify-center w-full h-[100dvh]"
 			ref={ref}
 		>
-			<div className="absolute hidden lg:block top-0 h-full w-[99%] bg-transparent">
+			{/* <div className="absolute hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">
 				{render && <MyCard />}
-			</div>
+			</div> */}
 			<nav className="pb-6 md:pb-0 md:my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-2 md:gap-6">
 					{navigation.map((item, index) => (
@@ -64,7 +64,7 @@ export default function Hero() {
 					))}
 				</ul>
 			</nav>
-			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+			<div className="hidden w-full h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			{/* <ParticlesLight
 				className="absolute dark:invisible inset-0 -z-10 animate-fade-in"
 				quantity={300}
@@ -83,7 +83,7 @@ export default function Hero() {
 				<motion.span >A</motion.span>
 				<motion.span >Y</motion.span>
 			</motion.h1>
-			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+			<div className="hidden w-full h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
 				<motion.p
 					style={{ y: y2 }}
