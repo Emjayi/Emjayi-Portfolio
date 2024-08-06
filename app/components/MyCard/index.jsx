@@ -20,10 +20,13 @@ export default function MyCard() {
             </Physics>
             <Environment background blur={0.75}>
                 {/* <color attach="background" args={['black']} /> */}
-                <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+                <Lightformer intensity={6} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
                 <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
                 <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+                <Lightformer intensity={3} color="#F86A1D" position={[-7, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                <Lightformer intensity={3} color="#06A8FF" position={[-8, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                <Lightformer intensity={3} color="#FF1FBB" position={[-9, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[10, 5, 1]} />
+                <Lightformer intensity={3} color="#FFC700" position={[-12, -4, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
             </Environment>
         </Canvas>
     )
@@ -33,7 +36,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
     const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
     const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
-    const { nodes, materials } = useGLTF('/card/tag.glb')
+    const { nodes, materials } = useGLTF('/card/tag2.glb')
     const texture = useTexture('/card/band.jpg')
     const { width, height } = useThree((state) => state.size)
     const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]))
