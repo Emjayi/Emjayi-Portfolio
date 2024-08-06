@@ -47,17 +47,17 @@ export default function PasswordGenerator() {
             </div>
 
             <div className="flex items-center space-x-2">
-                <Checkbox id="symbols" checked={includeSymbols} onCheckedChange={(e) => setIncludeSymbols(!e)} />
+                <Checkbox id="symbols" checked={includeSymbols} onCheckedChange={() => setIncludeSymbols(!includeSymbols)} />
                 <label htmlFor="symbols">Include Symbols</label>
             </div>
 
             <div className="flex items-center space-x-2">
-                <Checkbox id="numbers" checked={includeNumbers} onCheckedChange={(e) => setIncludeNumbers(!e)} />
+                <Checkbox id="numbers" checked={includeNumbers} onCheckedChange={() => setIncludeNumbers(!includeNumbers)} />
                 <label htmlFor="numbers">Include Numbers</label>
             </div>
 
             <div className="flex items-center space-x-2">
-                <Checkbox id="sha256" checked={useSHA256} onCheckedChange={(e) => setUseSHA256(!e)} />
+                <Checkbox id="sha256" checked={useSHA256} onCheckedChange={() => setUseSHA256(!useSHA256)} />
                 <label htmlFor="sha256">Use SHA-256</label>
             </div>
 
