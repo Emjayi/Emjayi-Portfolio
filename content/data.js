@@ -122,8 +122,4 @@ export const tools = [
 		name: "Text to Speech",
 		href: "text-to-speech"
 	},
-	{
-		name: "HTML Minifier",
-		href: "html-minifier"
-	},
 ]
