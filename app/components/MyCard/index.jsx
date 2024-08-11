@@ -42,7 +42,7 @@ export default function MyCard() {
     )
 }
 
-function Band({ maxSpeed = 50, minSpeed = 10, clicks }) {
+function Band({ maxSpeed = 30, minSpeed = 10, clicks }) {
     const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
     const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
     const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
