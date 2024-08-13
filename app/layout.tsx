@@ -6,7 +6,6 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import AnimatedCursor from "react-animated-cursor";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
 export const metadata: Metadata = {
 	title: {
 		default: "Emjay",
@@ -75,6 +74,7 @@ export default function RootLayout({
 				" ",
 			)} `}
 		>
+			<SpeedInsights />
 			<head>
 				<Analytics />
 			</head>
