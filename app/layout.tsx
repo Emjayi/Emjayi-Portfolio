@@ -3,8 +3,8 @@ import React from "react";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
 import AnimatedCursor from "react-animated-cursor";
+import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
 	title: {
@@ -74,10 +74,6 @@ export default function RootLayout({
 				" ",
 			)} `}
 		>
-			<SpeedInsights />
-			<head>
-				<Analytics />
-			</head>
 			<body
 				className={`max-w-screen bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
 					}`}
@@ -93,13 +89,15 @@ export default function RootLayout({
 					outerAlpha={0}
 					outerStyle={{
 						border: "2px solid #555",
-					}}
-					innerStyle={{
-						backgroundColor: "var(--cursor-inner)",
-					}}
-					showSystemCursor={true}
-				/> */}
+						}}
+						innerStyle={{
+							backgroundColor: "var(--cursor-inner)",
+							}}
+							showSystemCursor={true}
+							/> */}
 				{/* </div> */}
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
