@@ -1,5 +1,5 @@
 'use client'
-import { Button } from '@/components/ui/button';
+import { Button } from '@/app/components/ui/button';
 // pages/quote-generator.js
 import { useState, useEffect, useRef } from 'react';
 

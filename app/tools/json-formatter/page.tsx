@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
+import { Textarea } from '@/app/components/ui/textarea';
+import { Button } from '@/app/components/ui/button';
 
 const JSONFormatter = () => {
     const [input, setInput] = useState<string>('');

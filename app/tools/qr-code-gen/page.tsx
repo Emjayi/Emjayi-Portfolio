@@ -2,8 +2,8 @@
 
 import { useState, useRef } from 'react';
 import QRCode from 'qrcode.react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/app/components/ui/input';
+import { Button } from '@/app/components/ui/button';
 
 const QRCodeGenerator = () => {
     const [text, setText] = useState<string>('');

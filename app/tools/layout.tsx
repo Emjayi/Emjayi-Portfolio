@@ -1,8 +1,8 @@
 // 'use client'
 // import { ThemeProvider } from "next-themes";
-// import Particles from "../components/particles";
-// import ParticlesLight from "../components/particles-light";
-// import { ThemeSwitcher } from "../components/theme-switcher";
+// import Particles from "@/components/particles";
+// import ParticlesLight from "@/components/particles-light";
+// import { ThemeSwitcher } from "@/components/theme-switcher";
 // import Link from "next/link";
 // import { usePathname } from "next/navigation";
 
@@ -41,16 +41,12 @@
 // }
 'use client'
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "../components/theme-switcher";
+import { ThemeSwitcher } from "@/app/components/theme-switcher";
 import { ThemeProvider } from "../theme-provider";
 import Link from "next/link";
-import Footer from "../components/Footer";
-import { ArrowLeft } from "lucide-react";
-import Particles from "../components/particles";
-import ParticlesLight from "../components/particles-light";
+import Footer from "@/app/components/Footer";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { opacity } from "../components/Preloader/anim";
 import { tools } from "@/content/data";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -1,12 +1,6 @@
 "use client"
-import { ArrowLeft } from "lucide-react";
-import { ThemeProvider } from "next-themes";
-import Footer from "../components/Footer";
-import { ThemeSwitcher } from "../components/theme-switcher";
 import Link from "next/link";
-import { HoverBorderGradient } from "../components/ui/Hover-Border-Gradient";
-import Particles from "../components/particles";
-import ParticlesLight from "../components/particles-light";
+import { HoverBorderGradient } from "@/app/components/ui/Hover-Border-Gradient";
 import { tools } from "@/content/data";
 
 export default function Page() {

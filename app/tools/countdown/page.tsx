@@ -1,8 +1,8 @@
 'use client';
 // Import the necessary components and hooks
 import { useState, useEffect } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/app/components/ui/input';
+import { Button } from '@/app/components/ui/button';
 
 const CountdownTimer = () => {
     // Define state for time, timer active status, and initial time setting

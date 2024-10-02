@@ -1,15 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Preloader from "./components/Preloader";
-import { ThemeSwitcher } from "./components/theme-switcher";
+import Preloader from "@/app/components/Preloader";
+import { ThemeSwitcher } from "@/app/components/theme-switcher";
 import { ThemeProvider } from "./theme-provider";
-import Projects from "./components/projects";
-import Lenis from "lenis";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Tools from "./components/Tools";
-import Experience from "./components/Experience";
+import Projects from "@/app/components/projects";
+import Footer from "@/app/components/Footer";
+import Hero from "@/app/components/Hero";
+import Tools from "@/app/components/Tools";
+import Experience from "@/app/components/Experience";
 
 export default function Home() {
 

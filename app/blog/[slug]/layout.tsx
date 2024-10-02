@@ -1,6 +1,6 @@
 'use client'
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "../../components/theme-switcher";
+import { ThemeSwitcher } from "@/app/components/theme-switcher";
 import { ThemeProvider } from "../../theme-provider";
 import Link from "next/link";
 

@@ -3,7 +3,7 @@ import { Card } from "../card";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpIcon, Github, Linkedin, Mail, PhoneCall } from "lucide-react";
 import { TextGenerateEffect } from "@/app/components/ui/text-generator";
-import { AnimatedTooltip } from "@/app/components/ui/tooltip";
+import { AnimatedTooltip } from "@/app/components/tooltip";
 import { Link as ScrollLink } from "react-scroll";
 import { usePathname } from "next/navigation";
 

@@ -1,15 +1,15 @@
 'use client'
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "../components/theme-switcher";
+import { ThemeSwitcher } from "@/app/components/theme-switcher";
 import { ThemeProvider } from "../theme-provider";
 import Link from "next/link";
-import Footer from "../components/Footer";
+import Footer from "@/app/components/Footer";
 import { ArrowLeft } from "lucide-react";
-import Particles from "../components/particles";
-import ParticlesLight from "../components/particles-light";
+import Particles from "@/app/components/particles";
+import ParticlesLight from "@/app/components/particles-light";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { opacity } from "../components/Preloader/anim";
+import { opacity } from "@/app/components/Preloader/anim";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     const pageName = usePathname().split("/")[1];

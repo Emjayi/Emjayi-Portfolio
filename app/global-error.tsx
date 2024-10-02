@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
-import Particles from './components/particles'
+import Particles from '@/app/components/particles'
 import { ThemeProvider } from './theme-provider'
-import { HoverBorderGradient } from './components/ui/Hover-Border-Gradient'
+import { HoverBorderGradient } from '@/app/components/ui/Hover-Border-Gradient'
 
 export default function GlobalError({
     error,

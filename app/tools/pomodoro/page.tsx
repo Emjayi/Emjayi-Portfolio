@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/app/components/ui/button';
 
 const PomodoroTimer = () => {
     const [time, setTime] = useState<number>(1500); // 25 minutes

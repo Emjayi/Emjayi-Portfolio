@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/app/components/ui/input';
+import { Textarea } from '@/app/components/ui/textarea';
 
 const MarkdownPreviewer = () => {
     const [markdown, setMarkdown] = useState<string>('');

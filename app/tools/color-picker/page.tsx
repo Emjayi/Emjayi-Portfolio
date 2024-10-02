@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from '@/components/ui/input';
+import { Input } from '@/app/components/ui/input';
 
 const ColorPicker = () => {
     const [color, setColor] = useState<string>('#c41717');

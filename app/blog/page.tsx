@@ -1,5 +1,5 @@
-import { CardDemo } from "../components/ui/ContentCard";
-import { HoverBorderGradient } from "../components/ui/Hover-Border-Gradient";
+import { CardDemo } from "@/app/components/ui/ContentCard";
+import { HoverBorderGradient } from "@/app/components/ui/Hover-Border-Gradient";
 
 export default function Page() {
     return (

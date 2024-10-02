@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/app/components/ui/input';
+import { Button } from '@/app/components/ui/button';
 
 const hexToRgb = (hex: string) => {
     let r = 0, g = 0, b = 0;

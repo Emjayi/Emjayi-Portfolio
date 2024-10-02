@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/app/components/ui/input';
+import { Button } from '@/app/components/ui/button';
 
 const CSSGradientGen = () => {
     const [color1, setColor1] = useState<string>('#ff0000');
