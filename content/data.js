@@ -11,30 +11,36 @@ export const projects = [
 
 		link: "https://baroquegp.com/",
 
-		color: "#85700080",
+		color: "#96751e",
 	},
+	{
+		title: "Alireza Refaei",
 
+		description:
+			"Though he views photography as a medium for storytelling, Alireza's images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+
+		src: "alireza.png",
+
+		link: "https://alirezarefaei.com/",
+
+		color: "#225560",
+	},
 	{
 		title: "IML Technology",
 		description:
-			"This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes.",
+			"In Progress...",
 		src: "iml.png",
 		link: "#",
-		color: "#d1260099",
+		color: "#631750",
 	},
-
-	// {
-	// 	title: "Zissou",
-
-	// 	description:
-	// 		"Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-
-	// 	src: "officestudio.png",
-
-	// 	link: "#",
-
-	// 	color: "#00a0d199",
-	// },
+	{
+		title: "Silencio",
+		description:
+			"In Progress...",
+		src: "silencio.png",
+		link: "#",
+		color: "#24693d",
+	},
 ];
 
 export const tools = [

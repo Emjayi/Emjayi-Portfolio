@@ -18,7 +18,7 @@ const Card = ({ title, description, src, link, color, i }: any) => {
 
 	return (
 		<div className={styles.cardContainer}>
-			<Link href={`${link}`} className={styles.card} style={{ backgroundColor: color, top: `calc(-5vh + ${i * 25}px)` }}>
+			<Link target={link !== "#" ? "_blank" : ""} href={`${link}`} className={styles.card} style={{ backgroundColor: color, top: `calc(-5vh + ${i * 25}px)` }}>
 				{/* <div
 					
 					}
