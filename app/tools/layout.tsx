@@ -96,8 +96,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         {children}
                     </div>
                 </div>
-                {(pathName === '/tools') && < Footer />}
             </section>
+            {(pathName === '/tools') && < Footer />}
         </ThemeProvider >
     );
 }

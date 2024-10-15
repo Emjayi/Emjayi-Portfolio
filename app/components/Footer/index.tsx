@@ -152,10 +152,9 @@ const Section1 = () => {
 				Give me a call.
 			</p>
 			<div className="h-full hidden lg:flex flex-col justify-end">
-				<TextGenerateEffect
-					words={description}
-					className="animate-fade-in-1 justify-self-start px-5 mb-4"
-				/>
+				<p className="animate-fade-in-1 lg:text-lg xl:text-xl xl:font-bold text-zinc-300 lg:font-semibold justify-self-start px-5 mb-4">
+					{description}
+				</p>
 				<div className="animate-fade-in-1 flex py-5 px-10 gap-3 flex-wrap justify-center">
 					<AnimatedTooltip items={tech} />
 				</div>

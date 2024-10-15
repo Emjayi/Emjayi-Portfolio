@@ -15,17 +15,16 @@ export const TextGenerateEffect = ({
 	const [scope, animate] = useAnimate();
 	const wordsArray = words.split(" ");
 	useEffect(() => {
-		inView &&
-			animate(
-				"span",
-				{
-					opacity: 1,
-				},
-				{
-					duration: 2,
-					delay: stagger(0.2),
-				},
-			);
+		animate(
+			"span",
+			{
+				opacity: 1,
+			},
+			{
+				duration: 2,
+				delay: stagger(0.2),
+			},
+		);
 	}, [inView]);
 	const renderWords = () => {
 		return (
