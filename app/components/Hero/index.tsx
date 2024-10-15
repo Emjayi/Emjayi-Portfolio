@@ -35,9 +35,9 @@ export default function Hero() {
 			className="flex flex-col items-center justify-center w-full h-[100dvh]"
 			ref={ref}
 		>
-			<div className="absolute hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">
+			{/* <div className="absolute hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">
 				{render && <MyCard />}
-			</div>
+			</div> */}
 			<nav className="pb-6 md:pb-0 md:my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-2 md:gap-6">
 					{navigation.map((item, index) => (
