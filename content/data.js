@@ -3,7 +3,7 @@ export const projects = [
 		title: "Baroque",
 
 		description:
-			"The foundation of Baroque Company was laid in 1982 when Engineer Hasan Roshanayi Moghadam graduated from Ferdowsi University of Mashhad (Civil Engineering) and entered the construction field. After years of significant projects, in 2010, he established Baroque Company with reputable partners to harness modern techniques and new-generation specialists.",
+			"Baroque Company was founded in 2010 by Engineer Hasan Roshanayi Moghadam, after his 1982 graduation from Ferdowsi University of Mashhad (Civil Engineering). With years of experience in major construction projects, the company was established to incorporate modern techniques and a new generation of specialists.",
 
 		src: "baroque.png",
 
@@ -17,7 +17,7 @@ export const projects = [
 		title: "Alireza Refaei",
 
 		description:
-			"Though he views photography as a medium for storytelling, Alireza's images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+			"Alireza Refaei is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
 
 		src: "alireza.png",
 
@@ -28,18 +28,30 @@ export const projects = [
 	{
 		title: "IML Technology",
 		description:
-			"In Progress...",
+			"Pooyesh Abzar Pars Company has 16 years of experience in the field of designing and manufacturing plastic injection molds, plastic injection machines and automation of plastic parts production. (Still in Progress)",
 		src: "iml.png",
 		link: "#",
 		color: "#631750",
 	},
 	{
-		title: "Silencio",
+		title: "Takfazkala",
 		description:
-			"In Progress...",
+			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, we provide reliable, industry-standard products to power your projects safely and efficiently.",
 		src: "silencio.png",
 		link: "#",
 		color: "#24693d",
+	},
+	{
+		title: "Nahid Shahriarpour",
+
+		description:
+			"Nahid Shahriarpour is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
+
+		src: "alireza.png",
+
+		link: "https://nahidshahriarpour.com/",
+
+		color: "#225560",
 	},
 ];
 
