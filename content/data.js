@@ -14,7 +14,7 @@ export const projects = [
 		color: "#96751e",
 	},
 	{
-		title: "Alireza Refaei",
+		title: "Alireza's Portfolio",
 
 		description:
 			"Alireza Refaei is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
@@ -34,10 +34,10 @@ export const projects = [
 		color: "#631750",
 	},
 	{
-		title: "Nahid Shahriarpour",
+		title: "Nahid's Portfolio",
 
 		description:
-			"Nahid Shahriarpour is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
+			"Though she views photography as a medium for storytelling, Nahid's images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
 
 		src: "nahid.png",
 
@@ -48,7 +48,7 @@ export const projects = [
 	{
 		title: "Takfazkala",
 		description:
-			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, we provide reliable, industry-standard products to power your projects safely and efficiently.",
+			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, they provide reliable, industry-standard products to power your projects safely and efficiently.",
 		src: "takfazkala.png",
 		link: "https://takfazkala.com/",
 		color: "#692424",

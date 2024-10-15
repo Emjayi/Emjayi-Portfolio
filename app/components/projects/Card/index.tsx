@@ -23,10 +23,10 @@ const Card = ({ title, description, src, link, color, i }: any) => {
 					
 					}
 				> */}
-				<h2 className="font-display dark:text-black text-zinc-200">{title}</h2>
+				<h2 className=" text-zinc-200">{title}</h2>
 				<div className={styles.body}>
 					<div className={styles.description}>
-						<p className="font-sans dark:text-black text-zinc-200">{description}</p>
+						<p className="font-sans text-zinc-200">{description}</p>
 
 					</div>
 
