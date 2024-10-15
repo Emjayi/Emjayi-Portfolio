@@ -64,14 +64,14 @@ const socials = [
 	{
 		icon: <PhoneCall size={20} />,
 		href: "tel:+989332643163",
-		label: "Call, Telegram or Whatsapp",
-		handle: "Mohammad Javad Sepahi",
+		label: "",
+		handle: "Telegram",
 	},
 	{
 		icon: <Mail size={20} />,
 		href: "mailto:mjs32841@gmail.com",
-		label: "Email",
-		handle: "mjs32841",
+		label: "",
+		handle: "Linkedin",
 	},
 ];
 
@@ -151,13 +151,15 @@ const Section1 = () => {
 			<p className="absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56">
 				Give me a call.
 			</p>
-			<div className="h-full hidden lg:flex flex-col justify-end">
+			<div className="h-full w-[40%] hidden xl:flex flex-col justify-end text-justify">
+
+				<div className="animate-fade-in-1 hidden xl:flex py-5 px-10 gap-3 flex-wrap justify-start">
+					<AnimatedTooltip items={tech} />
+				</div>
 				<p className="animate-fade-in-1 lg:text-lg xl:text-xl xl:font-bold text-zinc-300 lg:font-semibold justify-self-start px-5 mb-4">
 					{description}
 				</p>
-				<div className="animate-fade-in-1 flex py-5 px-10 gap-3 flex-wrap justify-center">
-					<AnimatedTooltip items={tech} />
-				</div>
+
 			</div>
 			<Nav />
 		</div>
@@ -178,32 +180,87 @@ const Section2 = () => {
 const Nav = () => {
 	return (
 		<div className="flex shrink-0 gap-20 mt-32">
-			<div className="flex flex-col lg:flex-row w-full items-end justify-end gap-4 mx-auto mt-32 mb-12 sm:mb-0 sm:mt-0 sm:grid-cols-4 lg:gap-16">
-				{socials.map((s, index) => (
-					<Card key={index}>
+			<div className="flex flex-col lg:flex-row w-full items-end justify-start gap-2 mt-32 mb-12 sm:mb-0 sm:mt-0 lg:gap-2">
+				<div className="flex flex-col lg:w-[40vw] gap-2">
+					<div className="">
+						<Card>
+							<Link
+								href="tel:+989332643163"
+								target="_blank"
+								className="p-4 relative flex flex-col w-[80dvw] h-auto xl:h-[249px] lg:w-auto items-center gap-2 duration-700 group lg:gap-2 lg:py-6  lg:pb-6  lg:p-16"
+							>
+								{/* <span
+									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
+									aria-hidden="true"
+								/> */}
+								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
+									<PhoneCall size={20} />
+								</span>{" "}
+								<div className="z-10 flex flex-col items-center">
+									<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
+										Mohammad Javad Sepahi
+									</span>
+									<span className="mt-4 text-sm text-center duration-1000 dark:text-zinc-400 dark:group-hover:text-zinc-200">
+										Call me
+									</span>
+								</div>
+							</Link>
+						</Card>
+					</div>
+					<div className="flex gap-2 lg:w-auto justify-stretch">
+						{socials.map((s, index) => (
+							<Card key={index}>
+								<Link
+									href={s.href}
+									target="_blank"
+									className="p-4 relative flex flex-col w-[39dvw] lg:w-[20vw] items-center gap-2 duration-700 group lg:gap-2 lg:py-6  lg:pb-6  lg:p-16"
+								>
+									{/* <span
+									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
+									aria-hidden="true"
+								/> */}
+									<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
+										{s.icon}
+									</span>{" "}
+									<div className="z-10 flex flex-col items-center">
+										<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
+											{s.handle}
+										</span>
+										<span className="mt-4 text-sm text-center duration-1000 dark:text-zinc-400 dark:group-hover:text-zinc-200">
+											{s.label}
+										</span>
+									</div>
+								</Link>
+							</Card>
+						))}
+					</div>
+				</div>
+				<div className="flex flex-col gap-2">
+					<Card>
 						<Link
-							href={s.href}
+							href="mailto:mjs32841@gmail.com"
 							target="_blank"
-							className="p-4 relative flex flex-col w-[80dvw] lg:w-auto items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
+							className="p-4 relative flex flex-col w-[80dvw] lg:w-auto items-center gap-4 duration-700 group lg:gap-2 lg:py-24  lg:pb-48  lg:p-16"
 						>
 							{/* <span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
 									aria-hidden="true"
 								/> */}
 							<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
-								{s.icon}
+								<Mail size={20} />
 							</span>{" "}
 							<div className="z-10 flex flex-col items-center">
 								<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
-									{s.handle}
+									mjs32841
 								</span>
 								<span className="mt-4 text-sm text-center duration-1000 dark:text-zinc-400 dark:group-hover:text-zinc-200">
-									{s.label}
+									Email
 								</span>
 							</div>
 						</Link>
 					</Card>
-				))}
+				</div>
+
 			</div>
 		</div>
 	);

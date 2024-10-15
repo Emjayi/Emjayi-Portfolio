@@ -26,12 +26,12 @@ export const projects = [
 		color: "#225560",
 	},
 	{
-		title: "IML Technology",
+		title: "Takfazkala",
 		description:
-			"Pooyesh Abzar Pars Company has 16 years of experience in the field of designing and manufacturing plastic injection molds, plastic injection machines and automation of plastic parts production. (Still in Progress)",
-		src: "iml.png",
-		link: "#",
-		color: "#631750",
+			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, they provide reliable, industry-standard products to power your projects safely and efficiently.",
+		src: "takfazkala.png",
+		link: "https://takfazkala.com/",
+		color: "#692424",
 	},
 	{
 		title: "Nahid's Portfolio",
@@ -46,12 +46,12 @@ export const projects = [
 		color: "#220060",
 	},
 	{
-		title: "Takfazkala",
+		title: "IML Technology",
 		description:
-			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, they provide reliable, industry-standard products to power your projects safely and efficiently.",
-		src: "takfazkala.png",
-		link: "https://takfazkala.com/",
-		color: "#692424",
+			"Pooyesh Abzar Pars Company has 16 years of experience in the field of designing and manufacturing plastic injection molds, plastic injection machines and automation of plastic parts production. (Still in Progress)",
+		src: "iml.png",
+		link: "#",
+		color: "#631750",
 	},
 ];
 
