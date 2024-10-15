@@ -31,7 +31,7 @@ const Card = ({ title, description, src, link, color, i }: any) => {
 					</div>
 
 					<div className={styles.imageContainer}>
-						<motion.div style={{ scale: imageScale }} className={styles.inner}>
+						<motion.div style={{ scale: imageScale }} className={`${styles.inner} object-contain`}>
 							<Image fill src={`/images/${src}`} sizes="500" alt="image" />
 						</motion.div>
 					</div>

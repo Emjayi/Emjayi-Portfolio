@@ -8,18 +8,18 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
 	title: {
-		default: "Emjay",
+		default: "Emjay Sepahi",
 		template: "Keep it simple.",
 	},
 	description: "Keep it simple.",
 	openGraph: {
-		title: "Emjay",
+		title: "Emjay Sepahi",
 		description: "Keep it simple.",
-		url: "https://emjayi.ir",
-		siteName: "emjayi.ir",
+		url: "https://emjaysepahi.com",
+		siteName: "emjaysepahi.com",
 		images: [
 			{
-				url: "https://emjayi.ir/og.png",
+				url: "https://emjaysepahi.com/og.png",
 				width: 1920,
 				height: 1080,
 			},
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Emjay",
+		title: "Emjay Sepahi",
 		card: "summary_large_image",
 	},
 	icons: {

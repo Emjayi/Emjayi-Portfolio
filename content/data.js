@@ -34,24 +34,24 @@ export const projects = [
 		color: "#631750",
 	},
 	{
-		title: "Takfazkala",
-		description:
-			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, we provide reliable, industry-standard products to power your projects safely and efficiently.",
-		src: "silencio.png",
-		link: "#",
-		color: "#24693d",
-	},
-	{
 		title: "Nahid Shahriarpour",
 
 		description:
 			"Nahid Shahriarpour is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
 
-		src: "alireza.png",
+		src: "nahid.png",
 
 		link: "https://nahidshahriarpour.com/",
 
-		color: "#225560",
+		color: "#220060",
+	},
+	{
+		title: "Takfazkala",
+		description:
+			"Takfazakala offers high-quality electrical equipment for professionals and DIY enthusiasts. From essential components to advanced tools, we provide reliable, industry-standard products to power your projects safely and efficiently.",
+		src: "takfazkala.png",
+		link: "https://takfazkala.com/",
+		color: "#692424",
 	},
 ];
 
