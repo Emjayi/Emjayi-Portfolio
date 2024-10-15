@@ -63,13 +63,13 @@ const description =
 const socials = [
 	{
 		icon: <PhoneCall size={20} />,
-		href: "tel:+989332643163",
+		href: "https://t.me/Emjayiii",
 		label: "",
 		handle: "Telegram",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:mjs32841@gmail.com",
+		href: "https://www.linkedin.com/in/emjayi/",
 		label: "",
 		handle: "Linkedin",
 	},
