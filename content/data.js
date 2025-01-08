@@ -117,3 +117,53 @@ export const tools = [
     href: 'css-gradient-gen',
   },
 ];
+export const tech = [
+  {
+    id: 1,
+    name: 'React',
+    designation: 'Capable',
+    image: '/icons/react2.png',
+  },
+  {
+    id: 2,
+    name: 'CSS',
+    designation: 'Design',
+    image: '/icons/css.png',
+  },
+  {
+    id: 3,
+    name: 'Javascript',
+    designation: 'Development',
+    image: '/icons/javascript.png',
+  },
+  {
+    id: 4,
+    name: 'Node js',
+    designation: 'Backend',
+    image: '/icons/nodejs.png',
+  },
+  {
+    id: 5,
+    name: 'Next js',
+    designation: 'Create',
+    image: '/icons/next-dark.png',
+  },
+  {
+    id: 6,
+    name: 'Framer motion',
+    designation: 'Animations',
+    image: '/icons/framer-dark.png',
+  },
+  {
+    id: 7,
+    name: 'Tailwind',
+    designation: 'UI',
+    image: '/icons/tailwind.png',
+  },
+  {
+    id: 0,
+    name: 'WordPress',
+    designation: 'Affordable',
+    image: '/icons/wordpress.png',
+  },
+];

@@ -4,6 +4,7 @@ import styles from './style.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import SpotlightCard from '../../ui/carddd';
 
 const Card = ({ title, description, src, link, color, i }: any) => {
   const container = useRef(null);
@@ -22,27 +23,29 @@ const Card = ({ title, description, src, link, color, i }: any) => {
         target={link !== '#' ? '_blank' : ''}
         href={`${link}`}
         className={styles.card}
-        style={{ backgroundColor: color, top: `calc(-5vh + ${i * 25}px)` }}
+        style={{ top: `calc(-5vh + ${i * 25}px)` }}
       >
-        {/* <div
+        <SpotlightCard className="custom-spotlight-card h-[80vh]" spotlightColor={color}>
+          {/* <div
 					
 					}
 				> */}
-        <h2 className=" text-zinc-200">{title}</h2>
-        <div className={styles.body}>
-          <div className={styles.description}>
-            <p className="font-sans text-zinc-200">{description}</p>
-          </div>
+          <h2 className=" text-zinc-200">{title}</h2>
+          <div className={styles.body}>
+            <div className={styles.description}>
+              <p className="font-sans text-zinc-200">{description}</p>
+            </div>
 
-          <div className={styles.imageContainer}>
-            <motion.div
-              style={{ scale: imageScale }}
-              className={`${styles.inner} object-contain`}
-            >
-              <Image fill src={`/images/${src}`} sizes="500" alt="image" />
-            </motion.div>
+            <div className={styles.imageContainer}>
+              <motion.div
+                style={{ scale: imageScale }}
+                className={`${styles.inner} object-contain`}
+              >
+                <Image fill src={`/images/${src}`} sizes="500" alt="image" />
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </SpotlightCard>
         {/* </div> */}
       </Link>
     </div>

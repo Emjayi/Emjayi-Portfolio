@@ -13,57 +13,7 @@ import { TextGenerateEffect } from '@/app/components/ui/text-generator';
 import { AnimatedTooltip } from '@/app/components/tooltip';
 import { Link as ScrollLink } from 'react-scroll';
 import { usePathname } from 'next/navigation';
-
-const tech = [
-	{
-		id: 1,
-		name: 'React',
-		designation: 'Capable',
-		image: '/icons/react2.png',
-	},
-	{
-		id: 2,
-		name: 'CSS',
-		designation: 'Design',
-		image: '/icons/css.png',
-	},
-	{
-		id: 3,
-		name: 'Javascript',
-		designation: 'Development',
-		image: '/icons/javascript.png',
-	},
-	{
-		id: 4,
-		name: 'Node js',
-		designation: 'Backend',
-		image: '/icons/nodejs.png',
-	},
-	{
-		id: 5,
-		name: 'Next js',
-		designation: 'Create',
-		image: '/icons/next-dark.png',
-	},
-	{
-		id: 6,
-		name: 'Framer motion',
-		designation: 'Animations',
-		image: '/icons/framer-dark.png',
-	},
-	{
-		id: 7,
-		name: 'Tailwind',
-		designation: 'UI',
-		image: '/icons/tailwind.png',
-	},
-	{
-		id: 0,
-		name: 'WordPress',
-		designation: 'Affordable',
-		image: '/icons/wordpress.png',
-	},
-];
+import { tech } from '@/content/data';
 const description =
 	'I love design and computers. My journey started with WordPress web design, followed by acquiring proficiency in CSS and JavaScript. Currently, I am immersed in the dynamic realm of cutting-edge web development technologies, engaging in hands-on projects to continually enhance my skills.';
 
@@ -168,14 +118,6 @@ const Section1 = () => {
 			<p className="absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56">
 				Give me a call.
 			</p>
-			<div className="h-full w-[40%] hidden xl:flex flex-col justify-end text-justify">
-				<p className="animate-fade-in-1 lg:text-lg text-zinc-600 lg:font-semibold justify-self-start px-5 mb-4">
-					{description}
-				</p>
-				<div className="animate-fade-in-1 hidden xl:flex py-5 px-10 gap-3 flex-wrap justify-start">
-					<AnimatedTooltip items={tech} />
-				</div>
-			</div>
 			<Nav />
 		</div>
 	);
