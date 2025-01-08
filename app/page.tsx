@@ -38,7 +38,6 @@ export default function Home() {
           <Hero />
           <div className="">
             <About />
-            <Skills />
             <Projects />
             <Tools />
             <Experience />

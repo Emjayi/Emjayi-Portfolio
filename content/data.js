@@ -161,7 +161,7 @@ export const tech = [
     image: '/icons/tailwind.png',
   },
   {
-    id: 0,
+    id: 8,
     name: 'WordPress',
     designation: 'Affordable',
     image: '/icons/wordpress.png',

@@ -1,3 +1,4 @@
+import Skills from "../Skills";
 import { TextGenerateEffect } from "../ui/text-gen-effect"
 
 const About = () => {
@@ -10,8 +11,9 @@ For me, coding isn’t just about writing lines of code—it’s about crafting 
 
 `;
     return (
-        <div className="px-48 h-[100vh] justify-center items-center flex text-justify">
+        <div className="px-48 h-[100vh] justify-center items-center flex flex-col gap-5 text-justify">
             <TextGenerateEffect words={words} />
+            <Skills />
         </div>
     )
 }
