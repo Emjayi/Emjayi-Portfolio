@@ -83,7 +83,6 @@ export default function Hero() {
           <motion.span>A</motion.span>
           <motion.span>Y</motion.span>
         </motion.h1>
-        <div className="hidden w-full h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
         <div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
           <motion.p
             style={{ y: y2 }}

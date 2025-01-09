@@ -11,7 +11,7 @@ For me, coding isn’t just about writing lines of code—it’s about crafting 
 
 `;
     return (
-        <div className="md:px-48 px-2 md:h-[100vh] justify-center items-center flex flex-col gap-5 text-justify">
+        <div className="md:px-16 lg:px-48 px-2 justify-center items-center flex flex-col gap-5 text-justify">
             <TextGenerateEffect words={words} />
             <Skills />
         </div>
