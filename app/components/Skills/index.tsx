@@ -10,7 +10,7 @@ const Skills = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: .5 }}
             viewport={{ once: true }}
-            className="w-full grid grid-cols-4">
+            className="w-full flex flex-col gap-2 md:grid grid-cols-4 ">
             {tech.map((t) => (
                 <motion.div
                     initial={{ opacity: 0 }}

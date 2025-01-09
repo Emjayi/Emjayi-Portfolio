@@ -70,7 +70,7 @@ export default function Hero() {
         </nav>
         <div className="hidden w-full animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
         <Particles
-          className="absolute inset-0 -z-10 animate-fade-in !w-[98%] overflow-visible h-[200dvh]"
+          className="absolute inset-0 -z-10 animate-fade-in !w-[98%] overflow-visible h-[200vh]"
           quantity={150}
         />
         <motion.h1

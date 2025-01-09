@@ -11,6 +11,9 @@ export default function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   return (
     <motion.div style={{ y: y }} ref={ref} id="projects">
+      <h1 className='text-center my-4 md:hidden'>
+        Projects
+      </h1>
       {projects.map((project, i) => {
         return <Card key={`p_${i}`} {...project} i={i} />;
       })}
