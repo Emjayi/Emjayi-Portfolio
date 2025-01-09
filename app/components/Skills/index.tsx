@@ -18,7 +18,7 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: t.id * .2 }}
                     key={t.name}
-                    className='text-center border-2 rounded-md p-3 m-2 flex gap-4 items-center justify-start dark:bg-zinc-900 bg-zinc-400'>
+                    className='text-center border-1 rounded-md p-3 m-2 flex gap-4 items-center justify-start dark:bg-zinc-900 dark:border-zinc-800 bg-zinc-300 border-zinc-200'>
                     <Image src={t.image} alt='image' width={30} height={20} className='rounded-full'>
                     </Image>
                     <h1>{t.name}</h1>
