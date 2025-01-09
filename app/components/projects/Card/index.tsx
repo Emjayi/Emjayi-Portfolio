@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
 import styles from './style.module.scss';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import SpotlightCard from '../../ui/carddd';
 
-const Card = ({ title, description, src, link, color, i }: any) => {
+const Card = memo(({ title, description, src, link, color, i }: any) => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -18,7 +18,7 @@ const Card = ({ title, description, src, link, color, i }: any) => {
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
 
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.cardContainer} ref={container}>
       <Link
         target={link !== '#' ? '_blank' : ''}
         href={`${link}`}
@@ -26,10 +26,6 @@ const Card = ({ title, description, src, link, color, i }: any) => {
         style={{ top: `calc(-5vh + ${i * 25}px)` }}
       >
         <SpotlightCard className="custom-spotlight-card h-[80vh]" spotlightColor={color}>
-          {/* <div
-					
-					}
-				> */}
           <h2 className=" text-zinc-200">{title}</h2>
           <div className={styles.body}>
             <div className={styles.description}>
@@ -41,15 +37,15 @@ const Card = ({ title, description, src, link, color, i }: any) => {
                 style={{ scale: imageScale }}
                 className={`${styles.inner} object-contain`}
               >
-                <Image fill src={`/images/${src}`} sizes="500" alt="image" />
+                <Image fill src={`/images/${src}`} sizes="(max-width: 768px) 100vw, 50vw" alt="image" priority />
               </motion.div>
             </div>
           </div>
         </SpotlightCard>
-        {/* </div> */}
       </Link>
     </div>
   );
-};
+});
 
+Card.displayName = 'Card';
 export default Card;
