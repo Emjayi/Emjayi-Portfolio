@@ -30,8 +30,8 @@ export const TextGenerateEffect = ({
                     filter: filter ? "blur(0px)" : "none",
                 },
                 {
-                    duration: duration ? duration : .2,
-                    delay: stagger(0.2),
+                    duration: duration ? duration : .1,
+                    delay: stagger(0.1),
                 }
             );
         }
@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
 
     const renderWords = () => {
         return (
-            <motion.div ref={scope} className="md:min-h-[40vh] content-end mb-16">
+            <motion.div ref={scope} className="md:min-h-[40vh] content-end mb-2 md:mb-16">
                 {wordsArray.map((word, idx) => {
                     return (
                         <motion.span
