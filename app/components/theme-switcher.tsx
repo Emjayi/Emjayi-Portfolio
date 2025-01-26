@@ -26,9 +26,9 @@ export const ThemeSwitcher = () => {
       <div className="hidden dark:block">
         <Sun width={30} height={30} />
       </div>
-      <div className=" dark:hidden">
+      <h1 className=" dark:hidden">
         <Moon width={30} height={30} />
-      </div>
+      </h1>
     </button>
   );
 };

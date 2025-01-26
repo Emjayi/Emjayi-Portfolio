@@ -6,7 +6,9 @@ import { Metadata } from 'next';
 import AnimatedCursor from 'react-animated-cursor';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { AudioSwitcher } from './components/audio-switcher';
 export const metadata: Metadata = {
+  metadataBase: new URL('https://emjaysepahi.com'),
   title: {
     default: 'Emjay Sepahi',
     template: 'Keep it simple.',
@@ -44,6 +46,9 @@ export const metadata: Metadata = {
   },
   icons: {
     shortcut: '/favicon.png',
+    apple: [
+      { url: '/favicon.png', sizes: '480x480' }
+    ]
   },
 };
 const inter = Inter({
@@ -75,9 +80,8 @@ export default function RootLayout({
       )} `}
     >
       <body
-        className={`max-w-screen bg-white dark:bg-black ${
-          process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
-        }`}
+        className={`max-w-screen bg-white dark:bg-black ${process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
+          }`}
       >
         {/* <Header navItems={navItems} isVisible={true} /> */}
         {children}
@@ -98,6 +102,7 @@ export default function RootLayout({
 							/> */}
         {/* </div> */}
         <SpeedInsights />
+        <AudioSwitcher />
         <Analytics />
       </body>
     </html>
