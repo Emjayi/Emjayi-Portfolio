@@ -17,9 +17,9 @@ export default function Projects() {
 
   return (
     <motion.div style={{ y: y }} ref={ref} id="projects">
-      <h1 className='text-center my-4 md:hidden'>
+      <h2 className='text-center my-4 md:hidden'>
         Projects
-      </h1>
+      </h2>
       {projectCards}
     </motion.div>
   );

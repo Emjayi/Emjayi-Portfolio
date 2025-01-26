@@ -68,7 +68,7 @@ export default function Index() {
       id="experiences"
       className="flex flex-col justify-center items-center w-full pt-24"
     >
-      <h1 className="text-xl mb-5 self-start mt-12 px-[10%]">Experiences</h1>
+      <h2 className="text-xl mb-5 self-start mt-12 px-[10%]">Experiences</h2>
       {exp.reverse().map((e, index) => (
         <div
           key={index}
@@ -82,9 +82,9 @@ export default function Index() {
           </div>
         </div>
       ))}
-      <h1 className="text-xl mb-5 self-start mt-12 px-[10%]">
+      <h2 className="text-xl mb-5 self-start mt-12 px-[10%]">
         Certificates and Courses
-      </h1>
+      </h2>
       {std.reverse().map((e, index) => (
         <div
           key={100 + index}

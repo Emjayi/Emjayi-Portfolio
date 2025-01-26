@@ -73,7 +73,7 @@ export default function Hero() {
           className="absolute inset-0 -z-10 animate-fade-in !w-[98%] overflow-visible h-[300vh]"
           quantity={150}
         />
-        <motion.h1
+        <motion.h2
           style={{ y: y2 }}
           className="z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
         >
@@ -82,7 +82,7 @@ export default function Hero() {
           <motion.span>J</motion.span>
           <motion.span>A</motion.span>
           <motion.span>Y</motion.span>
-        </motion.h1>
+        </motion.h2>
         <div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
           <motion.p
             style={{ y: y2 }}

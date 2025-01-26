@@ -112,9 +112,9 @@ const Section1 = () => {
 					</Link>
 				</>
 			)}
-			<h1 className="absolute block sm:hidden w-[100dvw] text-center right-0 top-48">
+			<h2 className="absolute block sm:hidden w-[100dvw] text-center right-0 top-48">
 				Need a fullstack developer?
-			</h1>
+			</h2>
 			<p className="absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56">
 				Give me a call.
 			</p>
@@ -129,7 +129,7 @@ const Section2 = () => {
 			id="contacts"
 			className="hidden lg:flex justify-center lg:justify-between items-end"
 		>
-			<h1 className="text-[10vw] leading-[0.8] mt-10">Let's talk</h1>
+			<h2 className="text-[10vw] leading-[0.8] mt-10">Let's talk</h2>
 		</div>
 	);
 };

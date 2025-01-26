@@ -31,9 +31,9 @@ export function CardDemo({ src, title, readTime, description, href }: any) {
             </div>
           </div>
           <div className="text content">
-            <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+            <h2 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
               {title}
-            </h1>
+            </h2>
             <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
               {description}
             </p>
