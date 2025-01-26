@@ -1,9 +1,14 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import Particles from '@/app/components/particles';
 import { ThemeProvider } from './theme-provider';
 import { HoverBorderGradient } from '@/app/components/ui/Hover-Border-Gradient';
 
 export default function NotFound() {
+  // This will trigger a 404 response
+  notFound();
+
+  // The UI below will not be rendered because notFound() throws an error
   return (
     <ThemeProvider defaultTheme="dark">
       <main className="grid min-h-screen place-items-center px-6 bg-black py-24 sm:py-32 lg:px-8">
