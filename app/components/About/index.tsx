@@ -1,7 +1,13 @@
+import { motion, useScroll, useTransform } from "framer-motion";
 import Skills from "../Skills";
 import { TextGenerateEffect } from "../ui/text-gen-effect"
+import { useRef } from "react";
 
 const About = () => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll();
+    const y = useTransform(scrollYProgress, [0, 1.2], [80, -200]);
+    const y2 = useTransform(scrollYProgress, [0, .8], [80, -400]);
     const words = `
     I’m Mohammad Javad, a Full-Stack Web Developer with a passion for design, computers, and solving problems. My journey began with WordPress web design, where I first discovered the joy of building things that live on the internet.
 
@@ -11,10 +17,14 @@ For me, coding isn’t just about writing lines of code it’s about crafting so
 
 `;
     return (
-        <div className="md:h-[300vh]">
+        <div className="md:h-[200vh]">
             <div className="md:px-16 md:sticky md:top-0 lg:px-48 px-6 justify-center items-center flex flex-col gap-5 text-justify">
-                <TextGenerateEffect words={words} />
-                <Skills />
+                <motion.div style={{ y: y }} ref={ref} id="about">
+                    <TextGenerateEffect words={words} />
+                </motion.div>
+                <motion.div style={{ y: y2 }} ref={ref} id="about" className="w-full">
+                    <Skills />
+                </motion.div>
             </div>
         </div>
     )

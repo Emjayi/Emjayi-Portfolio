@@ -66,7 +66,7 @@ const PaletteGenerator = () => {
 
   return (
     <div className="p-12 space-y-12">
-      <div className="flex flex-col sm:flex-row gap-2 justify-center items-center ">
+      <div className="flex flex-col sm:flex-row gap-2 justify-center items-center">
         <p>Choose Color:</p>
         <Input
           type="color"

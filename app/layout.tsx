@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import AnimatedCursor from 'react-animated-cursor';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import SplashCursor from './components/SplashCursor/SplashCursor';
 export const metadata: Metadata = {
   title: {
     default: 'Emjay Sepahi',
@@ -75,9 +76,8 @@ export default function RootLayout({
       )} `}
     >
       <body
-        className={`max-w-screen bg-white dark:bg-black ${
-          process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
-        }`}
+        className={`max-w-screen bg-white dark:bg-black ${process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
+          }`}
       >
         {/* <Header navItems={navItems} isVisible={true} /> */}
         {children}
@@ -97,6 +97,7 @@ export default function RootLayout({
 							showSystemCursor={true}
 							/> */}
         {/* </div> */}
+        {/* <SplashCursor /> */}
         <SpeedInsights />
         <Analytics />
       </body>

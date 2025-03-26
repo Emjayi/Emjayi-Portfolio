@@ -40,7 +40,8 @@
     ".next/types/**/*.ts",
     "app/_app.tsx",
     "app/common/Magnetic/index.jsx",
-    "app/components/MyCard/index.jsx"
+    "app/components/MyCard/index.jsx",
+    "app/components/SplashCursor/SplashCursor.jsx"
   ],
   "exclude": [
     "node_modules"
