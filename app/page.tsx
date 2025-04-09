@@ -4,12 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Preloader from '@/app/components/Preloader';
 import { ThemeSwitcher } from '@/app/components/theme-switcher';
 import { ThemeProvider } from './theme-provider';
-import Projects from '@/app/components/projects';
+import Projects from '@/app/components/Main/projects';
 import Footer from '@/app/components/Footer';
-import Hero from '@/app/components/Hero';
+import Hero from '@/app/components/Main/Hero';
 import Tools from '@/app/components/Tools';
-import Experience from '@/app/components/Experience';
-import Skills from './components/Skills';
+import Experience from '@/app/components/Main/Experience';
+import Skills from './components/Main/Skills';
 import About from './components/About';
 
 export default function Home() {

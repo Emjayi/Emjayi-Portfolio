@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Skills from "../Skills";
+import Skills from "../Main/Skills";
 import { TextGenerateEffect } from "../ui/text-gen-effect"
 import { useRef } from "react";
 

@@ -87,33 +87,33 @@ export default function MyCard() {
         </Environment>
       </Canvas>
       {clicked >= 2 && clicked < 5 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           Seems like you enjoy it. You clicked{' '}
           <span className="linear-wipe-fir font-bold">{clicked}</span> times.
         </p>
       )}
       {clicked >= 5 && clicked < 8 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           You know... I could make that for you too!
         </p>
       )}
       {clicked >= 8 && clicked < 11 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           Stop It! You're gonna break it...
         </p>
       )}
       {clicked >= 11 && clicked < 13 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           Just kidding!
         </p>
       )}
       {clicked >= 13 && clicked < 15 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           No Seriously, Stop It!
         </p>
       )}
       {clicked === 15 && (
-        <p className="absolute -z-50 bottom-[15dvh] right-[15dvw] text-wrap w-36 text-center">
+        <p className="absolute -z-50 bottom-[15vh] right-[15dvw] text-wrap w-36 text-center">
           Whatever...
         </p>
       )}
@@ -158,9 +158,9 @@ function Band({ maxSpeed = 30, minSpeed = 10, clicks }) {
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]); // prettier-ignore
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]); // prettier-ignore
   useSphericalJoint(j3, card, [
-		[0, 0, 0],
-		[0, 1.45, 0],
-	]); // prettier-ignore
+    [0, 0, 0],
+    [0, 1.45, 0],
+  ]); // prettier-ignore
 
   useEffect(() => {
     if (hovered) {

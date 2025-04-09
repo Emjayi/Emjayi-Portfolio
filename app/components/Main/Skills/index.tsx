@@ -1,7 +1,7 @@
 import { tech } from '@/content/data'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { opacity } from '../Preloader/anim'
+import { opacity } from '../../Preloader/anim'
 
 const Skills = () => {
     return (

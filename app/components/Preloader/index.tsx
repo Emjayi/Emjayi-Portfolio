@@ -7,11 +7,11 @@ import { opacity, slideUp } from './anim';
 const words = [
   'I am',
   'A Full Stack',
-  'JavaScript',
-  'React',
-  'Next js',
-  'Node',
-  'TypeScript',
+  'A JavaScript',
+  'A React',
+  'A Next js',
+  'A Node js',
+  'A TypeScript',
   'Developer',
 ];
 
@@ -33,14 +33,11 @@ export default function Index() {
     );
   }, [index]);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height
+    } Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height
+    }  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height
+    } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
 
   const curve = {
     initial: {

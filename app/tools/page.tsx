@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div className="flex flex-wrap justify-center w-full px-[10%] pb-[10%] gap-5">
       {tools.map((t, index) => (
-        <Link key={index} href={`/tools/${t.href}`}>
+        <Link key={index} href={`/${t.href}`}>
           <HoverBorderGradient className=" py-4 px-8 inline">
             <p className="">{t.name}</p>
           </HoverBorderGradient>

@@ -1,4 +1,4 @@
-import MyCard from '../MyCard';
+import MyCard from '../../MyCard';
 
 const exp = [
   {

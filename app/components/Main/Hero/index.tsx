@@ -2,12 +2,12 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
-import Particles from '../particles';
+import Particles from '../../particles';
 import { useRef, useState, useEffect } from 'react';
 import Magnetic from '@/app/common/Magnetic';
 import Link from 'next/link';
 import MyCard from '@/app/components/MyCard';
-import { BackgroundLines } from '../ui/background-lines';
+import { BackgroundLines } from '../../ui/background-lines';
 
 const navigation = [
   { name: 'Projects', href: 'projects' },
@@ -34,7 +34,7 @@ export default function Hero() {
     <BackgroundLines className="">
       <div
         id="home"
-        className="flex flex-col items-center justify-center w-full h-[100dvh]"
+        className="flex flex-col items-center justify-center w-full h-[100vh]"
         ref={ref}
       >
         {/* <div className="absolute hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">

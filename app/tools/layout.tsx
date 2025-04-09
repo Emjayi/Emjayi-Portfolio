@@ -64,7 +64,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
       <ThemeSwitcher />
-      <section className="w-[100dw] min-h-[100dvh] bg-zinc-600/20 text-zinc-900 dark:text-white pb-10">
+      <section className="w-[100dw] min-h-[100vh] bg-zinc-600/20 text-zinc-900 dark:text-white pb-10">
         <div
           id="home"
           className="h-64 overflow-hidden  text-zinc-900 dark:text-white flex flex-col justify-center items-center"

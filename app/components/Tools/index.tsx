@@ -13,8 +13,8 @@ export default function Index() {
   });
   const x = useTransform(smoothScroll, [0, 1], [-100, 100]);
   const x2 = useTransform(smoothScroll, [0, 1], [200, -300]);
-  const x3 = useTransform(smoothScroll, [0, 1], [-800, 200]);
-  const x4 = useTransform(smoothScroll, [0, 1], [600, -400]);
+  const x3 = useTransform(smoothScroll, [0, 1], [-1400, 100]);
+  const x4 = useTransform(smoothScroll, [0, 1], [300, -400]);
   return (
     <div
       className="flex flex-col mt-4 md:mt-24 w-screen gap-2 flex-wrap justify-center items-center"
@@ -25,7 +25,7 @@ export default function Index() {
           {tools.map((t, index) => (
             <div key={index}>
               {index < 5 && (
-                <Link href={`/tools/${t.href}`}>
+                <Link href={`/${t.href}`}>
                   <HoverBorderGradient className=" py-4 px-8 inline">
                     <p className="">{t.name}</p>
                   </HoverBorderGradient>
