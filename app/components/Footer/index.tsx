@@ -1,6 +1,7 @@
-import React from 'react';
-import { Card } from '../card';
-import Link from 'next/link';
+"use client";
+import React, { useEffect, useState } from "react";
+import { Card } from "../card";
+import Link from "next/link";
 import {
 	ArrowLeft,
 	ArrowUpIcon,
@@ -8,44 +9,58 @@ import {
 	Linkedin,
 	Mail,
 	PhoneCall,
-} from 'lucide-react';
-import { TextGenerateEffect } from '@/app/components/ui/text-generator';
-import { AnimatedTooltip } from '@/app/components/tooltip';
-import { Link as ScrollLink } from 'react-scroll';
-import { usePathname } from 'next/navigation';
-import { tech } from '@/content/data';
+} from "lucide-react";
+import { TextGenerateEffect } from "@/app/components/ui/text-generator";
+import { AnimatedTooltip } from "@/app/components/tooltip";
+import { Link as ScrollLink } from "react-scroll";
+import { usePathname } from "next/navigation";
+import { tech } from "@/content/data";
+import MyCard from "../MyCard";
+import { useInView } from "framer-motion";
 const description =
-	'I love design and computers. My journey started with WordPress web design, followed by acquiring proficiency in CSS and JavaScript. Currently, I am immersed in the dynamic realm of cutting-edge web development technologies, engaging in hands-on projects to continually enhance my skills.';
+	"I love design and computers. My journey started with WordPress web design, followed by acquiring proficiency in CSS and JavaScript. Currently, I am immersed in the dynamic realm of cutting-edge web development technologies, engaging in hands-on projects to continually enhance my skills.";
 
 const socials = [
 	{
 		icon: <PhoneCall size={20} />,
-		href: 'https://t.me/Emjayiii',
-		label: '',
-		handle: 'Telegram',
+		href: "https://t.me/Emjayiii",
+		label: "",
+		handle: "Telegram",
 	},
 	{
 		icon: <Linkedin size={20} />,
-		href: 'https://www.linkedin.com/in/emjayi/',
-		label: '',
-		handle: 'Linkedin',
+		href: "https://www.linkedin.com/in/emjayi/",
+		label: "",
+		handle: "Linkedin",
 	},
 ];
 
 export default function Footer() {
 	const pathName = usePathname();
+	const [render, setRender] = useState(false);
+	const ref = React.useRef(null);
+	const inView = useInView(ref);
+
+	useEffect(() => {
+		if (inView) {
+			setRender(true);
+		}
+	}, [inView]);
 	return (
 		<div
+			ref={ref}
 			className="relative h-[800px]"
-			style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
+			style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
 		>
 			<div className="relative h-[calc(100vh+800px)] -top-[100vh]">
 				<div className="h-[800px] sticky top-[calc(100vh-800px)]">
+					<div className="absolute z-0 hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">
+						{render && <MyCard />}
+					</div>
 					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between">
 						<Section1 />
 						<Section2 />
-
-						{pathName === '/' && (
+						{pathName === "/" && (
 							<ScrollLink
 								to="home"
 								smooth={true}
@@ -56,7 +71,7 @@ export default function Footer() {
 								<p>Back to top</p>
 							</ScrollLink>
 						)}
-						{pathName !== '/' && (
+						{pathName !== "/" && (
 							<>
 								<Link
 									href="/"
@@ -90,7 +105,7 @@ const Section1 = () => {
 	const pathName = usePathname();
 	return (
 		<div className="flex justify-between items-center">
-			{pathName === '/' && (
+			{pathName === "/" && (
 				<ScrollLink
 					to="home"
 					smooth={true}
@@ -101,7 +116,7 @@ const Section1 = () => {
 					<p>Back to top</p>
 				</ScrollLink>
 			)}
-			{pathName !== '/' && (
+			{pathName !== "/" && (
 				<>
 					<Link
 						href="/"
@@ -152,7 +167,7 @@ const Nav = () => {
 								/> */}
 								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
 									<PhoneCall size={20} />
-								</span>{' '}
+								</span>{" "}
 								<div className="z-10 flex flex-col items-center">
 									<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
 										Mohammad Javad Sepahi
@@ -178,7 +193,7 @@ const Nav = () => {
 								/> */}
 									<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
 										{s.icon}
-									</span>{' '}
+									</span>{" "}
 									<div className="z-10 flex flex-col items-center">
 										<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
 											{s.handle}
@@ -205,7 +220,7 @@ const Nav = () => {
 								/> */}
 							<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
 								<Mail size={20} />
-							</span>{' '}
+							</span>{" "}
 							<div className="z-10 flex flex-col items-center">
 								<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
 									mjs32841

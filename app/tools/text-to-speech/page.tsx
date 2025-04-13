@@ -1,6 +1,6 @@
 // 'use client';
 
-import NotFound from '@/app/not-found';
+import NotFound from "@/app/not-found";
 
 // import { useEffect, useState } from 'react';
 // import { Textarea } from '@/components/ui/textarea';
@@ -52,5 +52,5 @@ import NotFound from '@/app/not-found';
 // export default TextToSpeech;
 
 export default function Page() {
-  return <NotFound />;
+	return <NotFound />;
 }
