@@ -41,7 +41,8 @@
     "app/_app.tsx",
     "app/common/Magnetic/index.jsx",
     "app/components/MyCard/index.jsx",
-    "app/components/SplashCursor/SplashCursor.jsx"
+    "app/components/SplashCursor/SplashCursor.jsx",
+    "next.config.js"
   ],
   "exclude": [
     "node_modules"

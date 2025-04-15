@@ -17,7 +17,7 @@ export default function Index() {
 	const x4 = useTransform(smoothScroll, [0, 1], [300, -400]);
 	return (
 		<div
-			className="flex flex-col mt-4 md:mt-24 w-screen gap-2 flex-wrap justify-center items-center"
+			className="flex flex-col mt-56 md:mt-24 w-screen gap-2 flex-wrap justify-center items-center"
 			ref={ref}
 		>
 			<div className="hidden md:flex flex-col w-full gap-4 flex-wrap justify-center items-center">

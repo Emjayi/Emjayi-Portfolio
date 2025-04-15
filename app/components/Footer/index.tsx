@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import { tech } from "@/content/data";
 import MyCard from "../MyCard";
 import { useInView } from "framer-motion";
+import BackForFooter from "./back";
 const description =
 	"I love design and computers. My journey started with WordPress web design, followed by acquiring proficiency in CSS and JavaScript. Currently, I am immersed in the dynamic realm of cutting-edge web development technologies, engaging in hands-on projects to continually enhance my skills.";
 
@@ -52,14 +53,11 @@ export default function Footer() {
 			className="relative h-[800px]"
 			style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
 		>
+			<BackForFooter />
 			<div className="relative h-[calc(100vh+800px)] -top-[100vh]">
 				<div className="h-[800px] sticky top-[calc(100vh-800px)]">
-					<div className="absolute z-0 hidden lg:block top-0 h-full w-full overflow-x-hidden bg-transparent">
-						{render && <MyCard />}
-					</div>
-					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/50 dark:via-zinc-900 to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between">
+					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/20 dark:via-zinc-900/80 to-zinc-900/50 dark:to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between">
 						<Section1 />
-						<Section2 />
 						{pathName === "/" && (
 							<ScrollLink
 								to="home"
@@ -104,7 +102,7 @@ export default function Footer() {
 const Section1 = () => {
 	const pathName = usePathname();
 	return (
-		<div className="flex justify-between items-center">
+		<div className="flex sm:h-screen sm:justify-center justify-between items-center">
 			{pathName === "/" && (
 				<ScrollLink
 					to="home"
@@ -134,26 +132,19 @@ const Section1 = () => {
 				Give me a call.
 			</p>
 			<Nav />
+			<p className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-12">
+				All rights reserved ©2025 <br /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link>
+			</p>
 		</div>
 	);
 };
 
-const Section2 = () => {
-	return (
-		<div
-			id="contacts"
-			className="hidden lg:flex justify-center lg:justify-between items-end"
-		>
-			<h2 className="text-[10vw] leading-[0.8] mt-10">Let's talk</h2>
-		</div>
-	);
-};
 
 const Nav = () => {
 	return (
 		<div className="flex shrink-0 gap-20 mt-32">
 			<div className="flex flex-col lg:flex-row w-full items-end justify-start gap-2 mt-32 mb-12 sm:mb-0 sm:mt-0 lg:gap-2">
-				<div className="flex flex-col lg:w-[40vw] gap-2">
+				<div className="flex flex-col lg:w-[40vw] gap-2 ">
 					<div className="">
 						<Card>
 							<Link

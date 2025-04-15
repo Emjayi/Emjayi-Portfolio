@@ -18,7 +18,7 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
-useGLTF.preload("/card/tag.glb");
+useGLTF.preload("/card/tag3.glb");
 useTexture.preload("/card/band.jpg");
 
 export default function MyCard() {
