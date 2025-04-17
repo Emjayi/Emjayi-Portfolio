@@ -81,31 +81,37 @@ export const other_projects = [
 		src: "other/player.png",
 		images: [],
 		link: "/projects/music-player",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/projects/(projects)/music-player/music-player.tsx"
 	},
 	{
 		title: "Todo List",
 		src: "other/todo.png",
 		link: "/projects/todo-list",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/projects/(projects)/todo-list/page.tsx"
 	},
 	{
 		title: "Color Palette Generator",
 		src: "other/color.png",
 		link: "/projects/color-palette",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/projects/(projects)/color-palette/page.tsx"
 	},
 	{
 		title: "Habit Tracker",
 		src: "other/habit.png",
 		link: "/projects/habit-tracker",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/tree/main/app/projects/(projects)/habit-tracker"
 	},
 	{
 		title: "Crypto Price Tracker",
 		src: "other/crypto.png",
 		link: "/projects/crypto-tracker",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/tree/main/app/projects/(projects)/crypto-tracker"
 	},
 	{
 		title: "Weather App",
 		src: "other/weather.png",
 		link: "/projects/weather",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/tree/main/app/projects/(projects)/weather"
 	},
 
 ];
@@ -115,79 +121,98 @@ export const collabs = [
 ]
 
 export const tools = [
-	{
-		name: "To-Do List",
-		href: "projects/todo-list",
-	},
+	// {
+	// 	name: "To-Do List",
+	// 	href: "projects/todo-list",
+	// 	git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/projects/(projects)/todo-list/page.tsx"
+	// },
 	{
 		name: "Calculator",
 		href: "tools/calculator",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/calculator/page.tsx"
 	},
 	{
 		name: "Password Generator",
 		href: "tools/pass-gen",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/pass-gen/page.tsx"
 	},
-	{
-		name: "Palette Generator",
-		href: "projects/color-palette",
-	},
+	// {
+	// 	name: "Palette Generator",
+	// 	href: "projects/color-palette",
+	// 	git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/projects/(projects)/color-palette/page.tsx"
+	// },
 	{
 		name: "Countdown Timer",
 		href: "tools/countdown",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/countdown/page.tsx"
 	},
 	{
 		name: "Image Compressor",
 		href: "tools/img-compressor",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/img-compressor/page.tsx"
 	},
 	{
 		name: "String splitter",
 		href: "tools/string-splitter",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/string-splitter/page.tsx"
 	},
 	{
 		name: "Random Quote Generator",
 		href: "tools/quote-gen",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/quote-gen/page.tsx"
 	},
 	{
 		name: "Currency Converter",
 		href: "tools/cur-converter",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/cur-converter/page.tsx"
 	},
 	{
 		name: "Expense Tracker",
 		href: "tools/exp-tracker",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/exp-tracker/page.tsx"
 	},
 	{
 		name: "Markdown Previewer",
 		href: "tools/markdown-previewer",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/markdown-previewer/page.tsx"
 	},
 	{
 		name: "Pomodoro Timer",
 		href: "tools/pomodoro",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/pomodoro/page.tsx"
 	},
 	{
 		name: "Color Picker",
 		href: "tools/color-picker",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/color-picker/page.tsx"
 	},
 	{
 		name: "JSON Formatter",
 		href: "tools/json-formatter",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/json-formatter/page.tsx"
 	},
 	{
 		name: "QR Code Generator",
 		href: "tools/qr-code-gen",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/qr-code-gen/page.tsx"
 	},
 	{
 		name: "Lorem Ipsum Generator",
 		href: "tools/lorem-ipsum-gen",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/lorem-ipsum-gen/page.tsx"
 	},
 	{
 		name: "Regular Expression Tester",
 		href: "tools/regex-tester",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/regex-tester/page.tsx"
 	},
 	{
 		name: "CSS Gradient Generator",
 		href: "tools/css-gradient-gen",
+		git_link: "https://github.com/Emjayi/Emjay-Portfolio/blob/main/app/tools/css-gradient-gen/page.tsx"
 	},
 ];
+
 export const tech = [
 	{
 		id: 1,

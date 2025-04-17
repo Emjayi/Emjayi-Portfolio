@@ -3,10 +3,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import Particles from "../../particles";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Magnetic from "@/app/common/Magnetic";
 import Link from "next/link";
-import MyCard from "@/app/components/MyCard";
 import { BackgroundLines } from "../../ui/background-lines";
 
 const navigation = [
@@ -27,7 +26,7 @@ export default function Hero() {
 
 	return (
 		<BackgroundLines className="">
-			<div
+			<section
 				id="home"
 				className="flex flex-col items-center justify-center w-full h-[100vh]"
 				ref={ref}
@@ -65,7 +64,7 @@ export default function Hero() {
 					className="absolute inset-0 -z-10 animate-fade-in !w-[98%] overflow-visible h-[300vh]"
 					quantity={150}
 				/>
-				<motion.h2
+				<motion.h1
 					style={{ y: y2 }}
 					className="z-10 font-tel text-6xl text-transparent duration-400 bg-black dark:bg-white animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
 				>
@@ -74,7 +73,7 @@ export default function Hero() {
 					<motion.span>J</motion.span>
 					<motion.span>A</motion.span>
 					<motion.span>Y</motion.span>
-				</motion.h2>
+				</motion.h1>
 				<div className="invisible md:visible flex gap-3 md:mt-12 mb-0 text-center duration-700 animate-fade-in">
 					<motion.p
 						style={{ y: y2 }}
@@ -98,7 +97,7 @@ export default function Hero() {
 				<div className="mb-8 mt-4 text-center animate-fade-in">
 					<h2 className="text-sm text-zinc-500">Keep it simple.</h2>
 				</div>
-			</div>
+			</section>
 		</BackgroundLines>
 	);
 }

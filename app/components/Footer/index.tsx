@@ -6,9 +6,11 @@ import {
 	ArrowLeft,
 	ArrowUpIcon,
 	Github,
+	Instagram,
 	Linkedin,
 	Mail,
 	PhoneCall,
+	Twitter,
 } from "lucide-react";
 import { TextGenerateEffect } from "@/app/components/ui/text-generator";
 import { AnimatedTooltip } from "@/app/components/tooltip";
@@ -18,6 +20,8 @@ import { tech } from "@/content/data";
 import MyCard from "../MyCard";
 import { useInView } from "framer-motion";
 import BackForFooter from "./back";
+import Script from "next/script";
+import { ThemeSwitcher } from "../theme-switcher";
 const description =
 	"I love design and computers. My journey started with WordPress web design, followed by acquiring proficiency in CSS and JavaScript. Currently, I am immersed in the dynamic realm of cutting-edge web development technologies, engaging in hands-on projects to continually enhance my skills.";
 
@@ -34,7 +38,26 @@ const socials = [
 		label: "",
 		handle: "Linkedin",
 	},
+	{
+		icon: <Instagram size={20} />,
+		href: "https://www.instagram.com/emjayi_/",
+		label: "",
+		handle: "Linkedin",
+	},
+	{
+		icon: <Twitter size={20} />,
+		href: "https://x.com/emjayi_/",
+		label: "",
+		handle: "X",
+	},
+	{
+		icon: <Github size={20} />,
+		href: "https://github.com/Emjayi/",
+		label: "",
+		handle: "Github",
+	},
 ];
+
 
 export default function Footer() {
 	const pathName = usePathname();
@@ -132,9 +155,10 @@ const Section1 = () => {
 				Give me a call.
 			</p>
 			<Nav />
-			<p className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-12">
+			<p className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-16">
 				All rights reserved ©2025 <br /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link>
 			</p>
+			<ThemeSwitcher className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-10" />
 		</div>
 	);
 };
@@ -143,6 +167,26 @@ const Section1 = () => {
 const Nav = () => {
 	return (
 		<div className="flex shrink-0 gap-20 mt-32">
+			<Script
+				id="structured-data-organization"
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Organization",
+						name: "Emjay Sepahi",
+						url: "https://emjaysepahi.com",
+						logo: "https://emjaysepahi.com/logo.png",
+						sameAs: [
+							"https://github.com/Emjayi/",
+							"https://www.linkedin.com/in/emjayi/",
+							"https://x.com/emjayi_/",
+							"https://www.instagram.com/emjayi_/",
+							"https://discordapp.com/users/652215998476320787/",
+						],
+					}),
+				}}
+			/>
 			<div className="flex flex-col lg:flex-row w-full items-end justify-start gap-2 mt-32 mb-12 sm:mb-0 sm:mt-0 lg:gap-2">
 				<div className="flex flex-col lg:w-[40vw] gap-2 ">
 					<div className="">
@@ -176,7 +220,7 @@ const Nav = () => {
 								<Link
 									href={s.href}
 									target="_blank"
-									className="p-4 relative flex flex-col w-[39dvw] lg:w-[20vw] items-center gap-2 duration-700 group lg:gap-2 lg:py-6  lg:pb-6  lg:p-16"
+									className="p-4 relative flex flex-col  items-center  duration-700 group lg:p-8"
 								>
 									{/* <span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
@@ -184,13 +228,10 @@ const Nav = () => {
 								/> */}
 									<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full dark:text-zinc-200 text-zinc-800 dark:group-hover:text-white group-hover:text-black dark:group-hover:bg-zinc-900 dark:border-zinc-500 border-zinc-600 dark:bg-zinc-900 dark:group-hover:border-zinc-200 drop-shadow-orange">
 										{s.icon}
-									</span>{" "}
+									</span>
 									<div className="z-10 flex flex-col items-center">
-										<span className="lg:text-xl font-medium duration-150 xl:text-3xl dark:text-zinc-200 dark:group-hover:text-white font-sans">
+										<span className="lg:text-sm font-medium duration-150 mt-6 dark:text-zinc-200 dark:group-hover:text-white font-sans">
 											{s.handle}
-										</span>
-										<span className="mt-4 text-sm text-center duration-1000 dark:text-zinc-400 dark:group-hover:text-zinc-200">
-											{s.label}
 										</span>
 									</div>
 								</Link>

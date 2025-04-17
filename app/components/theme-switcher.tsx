@@ -1,9 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import clsx from "clsx";
 
-export const ThemeSwitcher = () => {
+interface ThemeSwitcherProps {
+	className?: string;
+}
+
+export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
 
@@ -11,24 +15,38 @@ export const ThemeSwitcher = () => {
 		setMounted(true);
 	}, []);
 
-	if (!mounted) {
-		return null;
-	}
+	if (!mounted) return null;
+
+	const themes = [
+		{ label: "Light", value: "light" },
+		{ label: "Dark", value: "dark" },
+	];
 
 	return (
-		<button
-			className={
-				"w-fit fixed right-0 top-1 z-50 rounded-md animate-fade-in text-md duration-500 p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300"
-			}
-			name="Theme Switcher"
-			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+		<div
+			className={clsx(
+				"text-sm text-zinc-700 dark:text-zinc-200",
+				className
+			)}
 		>
-			<div className="hidden dark:block">
-				<Sun width={30} height={30} />
-			</div>
-			<div className=" dark:hidden">
-				<Moon width={30} height={30} />
-			</div>
-		</button>
+			<span className="mr-2 text-zinc-400">Theme:</span>
+			{themes.map((t, index) => (
+				<>
+					<button
+						key={t.value}
+						onClick={() => setTheme(t.value)}
+						className={clsx(
+							"text-sm transition capitalize",
+							theme === t.value
+								? "font-bold"
+								: " text-zinc-400 dark:hover:text-white hover:text-black"
+						)}
+					>
+						{t.label}
+					</button>
+					{index < themes.length - 1 && <span className="mx-1">|</span>}
+				</>
+			))}
+		</div>
 	);
 };

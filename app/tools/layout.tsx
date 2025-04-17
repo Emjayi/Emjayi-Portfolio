@@ -40,17 +40,18 @@
 // }
 "use client";
 import { usePathname } from "next/navigation";
-import { ThemeSwitcher } from "@/app/components/theme-switcher";
 import { ThemeProvider } from "../theme-provider";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { tools } from "@/content/data";
+import { Button } from "../components/ui/button";
+import { Github } from "lucide-react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	const pathName = usePathname();
-	const tool = tools.find((t) => `/tools/${t.href}` === pathName);
+	const tool = tools.find((t) => `/${t.href}` === pathName);
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: ref,
@@ -61,9 +62,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 		stiffness: 300,
 	});
 	const s = useTransform(smoothScroll, [0, 1], [50, -100]);
+	const git_link = tool?.git_link;
 	return (
 		<ThemeProvider attribute="class" defaultTheme="system">
-			<ThemeSwitcher />
 			<section className="w-[100dw] min-h-[100vh] bg-zinc-600/20 text-zinc-900 dark:text-white pb-10">
 				<div
 					id="home"
@@ -92,19 +93,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 						</motion.h1>
 					)}
 					{!(pathName === "/tools") && (
-						<Link
-							href="/tools"
-							className="absolute top-0 left-0 text-center m-6 text-zinc-900 dark:text-white"
+						<Button
+							onClick={() => window.history.back()}
+							className="fixed z-50 left-4 top-4"
+							variant="outline"
 						>
-							<p className="uppercase">Back</p>
-						</Link>
+							Back
+						</Button>
 					)}
-					{!(pathName === "/tools") && (
+					{(pathName !== "/tools" && git_link) && (
 						<Link
-							href="/"
-							className="absolute top-0 left-16 text-center m-6 text-zinc-900 dark:text-white"
+							target="_blank"
+							href={git_link ? git_link : "/tools"}
 						>
-							<p className="uppercase">Home</p>
+							<Button
+								variant="outline"
+								size="sm"
+								className="fixed z-50 right-4 top-4"
+							>
+								<Github className="mr-2 h-4 w-4" />
+								GitHub
+							</Button>
 						</Link>
 					)}
 					{/* <ParticlesLight
@@ -123,6 +132,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				</div>
 			</section>
 			{pathName === "/tools" && <Footer />}
-		</ThemeProvider>
+		</ThemeProvider >
 	);
 }
