@@ -69,7 +69,7 @@ export default function Index() {
 			className="flex flex-col justify-center items-center w-full pt-24"
 		>
 			<h2 className="text-xl mb-5 self-start mt-12 px-[10%]">Experiences</h2>
-			{exp.reverse().map((e, index) => (
+			{exp.map((e, index) => (
 				<div
 					key={index}
 					className="grid grid-cols-5 gap-2 border-t-2 mb-4 pt-2 w-full px-[10%]"
@@ -85,7 +85,7 @@ export default function Index() {
 			<h2 className="text-xl mb-5 self-start mt-12 px-[10%]">
 				Certificates and Courses
 			</h2>
-			{std.reverse().map((e, index) => (
+			{std.map((e, index) => (
 				<div
 					key={100 + index}
 					className="grid grid-cols-5 gap-2 border-t-2 mb-4 pt-2 w-full px-[10%]"

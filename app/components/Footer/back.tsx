@@ -6,24 +6,24 @@ import { ThemeProvider } from "@/app/theme-provider"
 
 // Color palette - one color for each letter
 const LETTER_COLORS = {
-    C: "#FF5555", // Red
-    O: "#FF9E55", // Orange
-    N: "#FFFF55", // Yellow
-    T: "#55FF55", // Green
-    A: "#55FFFF", // Cyan
+    C: "#FF6B6B", // Red
+    O: "#FF8811", // Orange
+    N: "#FFE66D", // Yellow
+    T: "#688E26", // Green
+    A: "#4ECDC4", // Cyan
     M: "#FF3377", // Pink
-    E: "#33FF77", // Mint
-    G: "#7733FF", // Purple
-    I: "#EE33FF", // Violet
-    U: "#3377FF", // Royal Blue
-    H: "#33FFAA", // Seafoam
+    E: "#392F5A", // Mint
+    G: "#EE33FF", // Purple
+    I: "#7733FF", // Violet
+    U: "#454B66", // Royal Blue
+    H: "#3DA35D", // Seafoam
 }
 
-const HIT_COLOR = "#333333"
+const HIT_COLOR = "#292F36"
 const BACKGROUND_COLOR = "#000000"
 const BACKGROUND_COLOR_DARK = "#fff"
 const DEFAULT_PADDLE_COLOR = "#ddd"
-const DEFAULT_PADDLE_COLOR_DARK = "#222"
+const DEFAULT_PADDLE_COLOR_DARK = "#292F36"
 const LETTER_SPACING = 1
 const WORD_SPACING = 3
 

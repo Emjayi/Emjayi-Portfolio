@@ -1,6 +1,6 @@
 import "../global.css";
 import React from "react";
-import { Inter } from "next/font/google";
+import { Inter } from "@next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import AnimatedCursor from "react-animated-cursor";
@@ -42,10 +42,7 @@ export const metadata: Metadata = {
 	twitter: {
 		title: "Emjay Sepahi",
 		card: "summary_large_image",
-	},
-	icons: {
-		shortcut: "/favicon.png",
-	},
+	}
 };
 const inter = Inter({
 	subsets: ["latin"],
@@ -76,9 +73,8 @@ export default function RootLayout({
 			)} `}
 		>
 			<body
-				className={`max-w-screen bg-white dark:bg-black ${
-					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-				}`}
+				className={`max-w-screen bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+					}`}
 			>
 				{/* <Header navItems={navItems} isVisible={true} /> */}
 				{children}

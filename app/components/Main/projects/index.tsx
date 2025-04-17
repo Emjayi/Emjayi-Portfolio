@@ -1,6 +1,6 @@
 "use client";
 import { projects } from "@/content/data";
-import { collabs } from "@/content/data";
+import { other_projects } from "@/content/data";
 import Card from "./Card";
 import CardCollab from "./CardCollab";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -17,8 +17,8 @@ export default function Projects() {
 		));
 	}, [projects]);
 	const collabCards = useMemo(() => {
-		return collabs.map((collab, i) => (
-			<CardCollab key={`p_${i}`} {...collab} i={i} />
+		return other_projects.map((project, i) => (
+			<CardCollab key={`p_${i}`} {...project} i={i} />
 		));
 	}, [projects]);
 
@@ -29,8 +29,8 @@ export default function Projects() {
 				{projectCards}
 			</motion.div>
 			<motion.div style={{ y: y }} ref={ref} id="projects">
-				<h2 className="text-4xl text-center mt-32 mb-4">
-					Collabrations and Mini Projects
+				<h2 className="text-3xl text-center mt-32 mb-4">
+					Collabrations and Other Projects
 				</h2>
 				<div className="md:grid md:grid-rows-2 md:grid-cols-3 gap-4">
 					{collabCards}

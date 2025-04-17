@@ -131,10 +131,10 @@ export default function HabitTracker() {
 			habits.map((habit) =>
 				habit.id === id
 					? {
-							...habit,
-							completed: !habit.completed,
-							streak: !habit.completed ? habit.streak + 1 : habit.streak,
-					  }
+						...habit,
+						completed: !habit.completed,
+						streak: !habit.completed ? habit.streak + 1 : habit.streak,
+					}
 					: habit,
 			),
 		);
@@ -329,11 +329,10 @@ export default function HabitTracker() {
 									className="h-1 bg-blue-500 dark:bg-blue-400 rounded-full"
 									initial={{ width: 0 }}
 									animate={{
-										width: `${
-											habits.length > 0
-												? (completedCount / habits.length) * 100
-												: 0
-										}%`,
+										width: `${habits.length > 0
+											? (completedCount / habits.length) * 100
+											: 0
+											}%`,
 									}}
 									transition={{ duration: 0.5, ease: "easeInOut" }}
 								/>
@@ -431,11 +430,10 @@ export default function HabitTracker() {
 											<div
 												className="h-4 bg-blue-500 dark:bg-blue-600 rounded-full"
 												style={{
-													width: `${
-														habits.length > 0
-															? (completedCount / habits.length) * 100
-															: 0
-													}%`,
+													width: `${habits.length > 0
+														? (completedCount / habits.length) * 100
+														: 0
+														}%`,
 												}}
 											/>
 										</div>
@@ -459,8 +457,8 @@ export default function HabitTracker() {
 															index === 0
 																? "bg-yellow-500"
 																: index === 1
-																? "bg-gray-400"
-																: "bg-amber-600",
+																	? "bg-gray-400"
+																	: "bg-amber-600",
 														)}
 													>
 														{index + 1}

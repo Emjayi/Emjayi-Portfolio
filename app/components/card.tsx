@@ -23,7 +23,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<div
 			onMouseMove={onMouseMove}
-			className="overflow-hidden relative border rounded-xl group md:gap-8 backdrop-blur-sm border-zinc-600 bg-zinc-400/50 dark:border-zinc-500/10 dark:bg-zinc-900/80"
+			className="overflow-hidden relative border rounded-xl group md:gap-8 backdrop-blur-sm border-zinc-600 bg-zinc-400/30 dark:border-zinc-500/10 dark:bg-zinc-900/30"
 		>
 			<div className="pointer-events-none ">
 				<div className="absolute inset-0 z-0  transition[mask-image:linear-gradient(black,transparent)]" />
