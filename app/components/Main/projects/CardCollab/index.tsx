@@ -20,7 +20,7 @@ const CardCollab = memo(({ title, src, link, color, i }: any) => {
 	return (
 		<div className={styles.cardContainer} ref={container}>
 			<Link
-				target={link !== "#" ? "_blank" : ""}
+				target={(title === "Morph Architects" || title === "PooladSazeh") ? "_blank" : ""}
 				href={`${link}`}
 				className={styles.card}
 				style={{ top: `calc(-5vh + ${i * 25}px)` }}

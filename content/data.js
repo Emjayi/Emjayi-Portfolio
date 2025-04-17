@@ -6,7 +6,7 @@ export const projects = [
 		src: "kerpo.jpg",
 		images: [],
 		link: "https://app.kerpino.io/",
-		git_link: "",
+		git_link: "https://github.com/emjayi/kerpino",
 		color: "#008b8b",
 	},
 	{
@@ -16,7 +16,7 @@ export const projects = [
 		src: "baroque.png",
 		images: [],
 		link: "https://baroquegp.com/",
-		git_link: "",
+		git_link: "https://github.com/Emjayi/baroque-next",
 		color: "#96751e",
 	},
 	{
@@ -26,7 +26,7 @@ export const projects = [
 			"Alireza Refaei is a skilled industrial, commercial, and product photographer, specializing in capturing high-quality images that highlight the essence and functionality of products and projects.",
 		src: "alireza.png",
 		link: "https://alirezarefaei.com/",
-		git_link: "",
+		git_link: "https://github.com/Emjayi/refaee-photography",
 		color: "#225560",
 	},
 	{
@@ -52,7 +52,7 @@ export const projects = [
 			"Though she views photography as a medium for storytelling, Nahid's images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
 		src: "nahid.png",
 		link: "https://nahidshahriarpour.com/",
-		git_link: "",
+		git_link: "https://github.com/Emjayi/nahid-photography",
 		color: "#220060",
 	},
 	{
@@ -60,7 +60,7 @@ export const projects = [
 		description:
 			"Pooyesh Abzar Pars Company has 16 years of experience in the field of designing and manufacturing plastic injection molds, plastic injection machines and automation of plastic parts production. (Still in Progress)",
 		src: "iml.png",
-		git_link: "",
+		git_link: "https://github.com/Emjayi/iml-next",
 		color: "#631750",
 	},
 ];
