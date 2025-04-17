@@ -1,5 +1,5 @@
 
-# Emjayi Portfolio
+# Emjay Portfolio
 
 This is the source code for [emjaysepahi.com](https://emjaysepahi.com), a personal portfolio website built with modern web technologies. It showcases projects, skills, and provides a platform for professional outreach.
 
