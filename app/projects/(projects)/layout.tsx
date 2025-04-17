@@ -4,10 +4,20 @@ import { Button } from "../../components/ui/button";
 import { Github } from "lucide-react";
 import Script from "next/script";
 import Link from "next/link";
+import React from "react";
+import { usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-	const project = other_projects.find((project) => project.link === window.location.pathname);
-	const git_link = project?.git_link
+	const pathname = usePathname();
+	const [project, setProject] = React.useState<typeof other_projects[0] | undefined>(undefined);
+
+	React.useEffect(() => {
+		const currentProject = other_projects.find((project) => project.link === pathname);
+		setProject(currentProject);
+	}, [pathname]);
+
+	const git_link = project?.git_link;
+
 	return (
 		<section>
 			<Button
@@ -33,11 +43,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					}),
 				}}
 			/>
-			{
-				git_link &&
-				<Link
-					href={git_link ? git_link : "/tools"}
-				>
+			{git_link && (
+				<Link href={git_link}>
 					<Button
 						variant="outline"
 						size="sm"
@@ -47,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 						GitHub
 					</Button>
 				</Link>
-			}
+			)}
 			{children}
 		</section>
 	);
