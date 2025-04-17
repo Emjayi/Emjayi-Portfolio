@@ -73,12 +73,12 @@ export default function Footer() {
 	return (
 		<div
 			ref={ref}
-			className="relative h-[800px]"
+			className="relative h-screen "
 			style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
 		>
 			<BackForFooter />
-			<div className="relative h-[calc(100vh+800px)] -top-[100vh]">
-				<div className="h-[800px] sticky top-[calc(100vh-800px)]">
+			<div className="relative h-[calc(100vh+100vh)] -top-[100vh]">
+				<div className="h-[800px] sticky top-[calc(100vh-95vh)]">
 					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/20 dark:via-zinc-900/80 to-zinc-900/50 dark:to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between">
 						<Section1 />
 						{pathName === "/" && (
@@ -155,10 +155,13 @@ const Section1 = () => {
 				Give me a call.
 			</p>
 			<Nav />
-			<p className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-16">
-				All rights reserved ©2025 <br /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link>
-			</p>
-			<ThemeSwitcher className="absolute hidden sm:block  text-zinc-400 text-sm text-center mx-auto bottom-10" />
+			<ThemeSwitcher className="sm:hidden " />
+			<div className="absolute bottom-12 hidden sm:block dark:text-zinc-400 text-zinc-700 text-sm text-center mx-auto">
+				<ThemeSwitcher className="sm:block " />
+				<p className="sm:block">
+					All rights reserved <br /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link> ©2025
+				</p>
+			</div>
 		</div>
 	);
 };
