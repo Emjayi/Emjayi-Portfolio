@@ -1,7 +1,7 @@
 import CryptoTracker from "@/app/components/crypto/crypto-tracker"
 
 export const metadata = {
-  title: "Crypto Tracker | Portfolio",
+  title: "Crypto Tracker",
   description: "Real-time cryptocurrency price tracker with glassmorphism design",
 }
 

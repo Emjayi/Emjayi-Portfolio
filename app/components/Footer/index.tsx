@@ -39,18 +39,6 @@ const socials = [
 		handle: "Linkedin",
 	},
 	{
-		icon: <Instagram size={20} />,
-		href: "https://www.instagram.com/emjayi_/",
-		label: "",
-		handle: "Linkedin",
-	},
-	{
-		icon: <Twitter size={20} />,
-		href: "https://x.com/emjayi_/",
-		label: "",
-		handle: "X",
-	},
-	{
 		icon: <Github size={20} />,
 		href: "https://github.com/Emjayi/",
 		label: "",
@@ -79,7 +67,7 @@ export default function Footer() {
 			<BackForFooter />
 			<div className="relative h-[calc(100vh+100vh)] -top-[100vh]">
 				<div className="h-[800px] sticky top-[calc(100vh-95vh)]">
-					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/20 dark:via-zinc-900/80 to-zinc-900/50 dark:to-zinc-900/0 py-8 px-12 h-full w-full flex flex-col justify-between">
+					<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-300/20 dark:via-zinc-900/80 to-zinc-900/50 dark:to-zinc-900/0 py-8 sm:px-12 h-full w-full flex flex-col justify-between items-center">
 						<Section1 />
 						{pathName === "/" && (
 							<ScrollLink
@@ -125,13 +113,13 @@ export default function Footer() {
 const Section1 = () => {
 	const pathName = usePathname();
 	return (
-		<div className="flex sm:h-screen sm:justify-center justify-between items-center">
+		<div className="flex flex-col sm:h-screen sm:justify-center justify-between items-center">
 			{pathName === "/" && (
 				<ScrollLink
 					to="home"
 					smooth={true}
 					duration={1200}
-					className="absolute flex gap-2 justify-center sm:hidden w-[100dvw] text-center right-0 top-32"
+					className="absolute flex gap-2 justify-center sm:hidden w-[100vw] text-center right-0 top-32"
 				>
 					<ArrowUpIcon width={22} height={22} />
 					<p>Back to top</p>
@@ -148,18 +136,17 @@ const Section1 = () => {
 					</Link>
 				</>
 			)}
-			<h2 className="absolute block sm:hidden w-[100dvw] text-center right-0 top-48">
+			<h2 className="absolute block sm:hidden w-[100vw] text-center right-0 top-48">
 				Need a fullstack developer?
 			</h2>
-			<p className="absolute block sm:hidden w-[100dvw] text-zinc-400 text-sm text-center right-0 top-56">
+			<p className="absolute block sm:hidden w-[100vw] text-zinc-400 text-sm text-center right-0 top-56">
 				Give me a call.
 			</p>
 			<Nav />
-			<ThemeSwitcher className="sm:hidden " />
-			<div className="absolute bottom-12 hidden sm:block dark:text-zinc-400 text-zinc-700 text-sm text-center mx-auto">
-				<ThemeSwitcher className="sm:block " />
-				<p className="sm:block">
-					All rights reserved <br /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link> ©2025
+			<div className=" -mt-6 sm:absolute sm:bottom-8 w-full dark:text-zinc-400 text-zinc-700 text-sm text-center mx-auto">
+				<ThemeSwitcher className="" />
+				<p className="hidden sm:block">
+					All rights reserved <br className="hidden sm:block" /> <Link href={"/"} className="dark:hover:text-zinc-100 hover:text-zinc-700">Emjay Sepahi</Link> ©2025
 				</p>
 			</div>
 		</div>
@@ -190,14 +177,14 @@ const Nav = () => {
 					}),
 				}}
 			/>
-			<div className="flex flex-col lg:flex-row w-full items-end justify-start gap-2 mt-32 mb-12 sm:mb-0 sm:mt-0 lg:gap-2">
+			<div className="flex flex-col lg:flex-row w-full sm:items-stretch justify-start gap-2 mt-32 mb-12 sm:mb-0 sm:mt-0 lg:gap-2">
 				<div className="flex flex-col lg:w-[40vw] gap-2 ">
 					<div className="">
 						<Card>
 							<Link
 								href="tel:+989332643163"
 								target="_blank"
-								className="p-4 relative flex flex-col w-[80dvw] h-auto xl:h-[249px] lg:w-auto items-center gap-2 duration-700 group lg:gap-2 lg:py-6  lg:pb-6  lg:p-16"
+								className="p-4 relative flex flex-col h-auto xl:h-[249px] lg:w-auto items-center justify-center gap-2 duration-700 group lg:gap-2 lg:py-6  lg:pb-6  lg:p-16"
 							>
 								{/* <span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
@@ -217,7 +204,7 @@ const Nav = () => {
 							</Link>
 						</Card>
 					</div>
-					<div className="flex gap-2 lg:w-auto justify-stretch">
+					<div className="grid grid-cols-3 gap-4">
 						{socials.map((s, index) => (
 							<Card key={index}>
 								<Link
@@ -247,7 +234,7 @@ const Nav = () => {
 						<Link
 							href="mailto:mjs32841@gmail.com"
 							target="_blank"
-							className="p-4 relative flex flex-col w-[80dvw] lg:w-auto items-center gap-4 duration-700 group lg:gap-2 lg:py-24  lg:pb-48  lg:p-16"
+							className="p-4 relative flex flex-col w-auto md:w-full items-center justify-center gap-4 duration-700 group lg:gap-2 lg:py-36 lg:p-16"
 						>
 							{/* <span
 									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-200 via-zinc-200/80 dark:from-zinc-500 dark:via-zinc-500/50 to-transparent"
